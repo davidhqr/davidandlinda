@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David & Linda • The Engagement Weekend • Lake Tahoe</title>
+  <meta name="description"
+    content="An intimate 16-guest winter celebration in Lake Tahoe, California. Fresh Sierra snow, candlelight toasts, and an unforgettable mountain escape." />
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            snow: '#FFFFFF',
+            alabaster: '#FBFBF9',
+            ivory: '#F7F5F0',
+            petal: {
+              light: '#FDF8F8',
+              DEFAULT: '#F6E5E5',
+              medium: '#E8C4C4',
+              deep: '#C99A9A',
+              rose: '#B48282'
+            },
+            champagne: {
+              light: '#F4EFE6',
+              DEFAULT: '#DFD3C3',
+              gold: '#D4AF37',
+              warm: '#C5A059',
+              bronze: '#9E7E43'
+            },
+            espresso: '#2C2A29',
+            taupe: '#78716C',
+            rosegold: '#B78D87'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          boxShadow: {
+            'frosted': '0 10px 40px -10px rgba(232, 196, 196, 0.28), 0 4px 16px -4px rgba(212, 175, 55, 0.08)',
+            'frosted-hover': '0 20px 45px -12px rgba(232, 196, 196, 0.42), 0 8px 24px -6px rgba(212, 175, 55, 0.14)',
+            'champagne': '0 8px 30px -6px rgba(212, 175, 55, 0.22)',
+          },
+          backgroundImage: {
+            'luminous-gradient': 'radial-gradient(circle at 50% 0%, rgba(246, 229, 229, 0.55) 0%, rgba(247, 245, 240, 0.3) 45%, rgba(251, 251, 249, 1) 100%)',
+            'shimmer-btn': 'linear-gradient(110deg, #2C2A29 0%, #3E3A38 45%, #524B47 50%, #3E3A38 55%, #2C2A29 100%)',
+            'rose-shimmer': 'linear-gradient(135deg, #F6E5E5 0%, #DFD3C3 50%, #F6E5E5 100%)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Editorial Styling & Subtle Animations */
+    body {
+      background-color: #FBFBF9;
+      color: #2C2A29;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Canvas Layer */
+    #ambient-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    /* Delicate Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle Shimmer Effect on Primary CTA */
+    .btn-shimmer {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(to right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.45) 50%,
+          rgba(255, 255, 255, 0) 100%);
+      transform: rotate(25deg);
+      transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .btn-shimmer:hover::after {
+      left: 130%;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #F7F5F0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #DFD3C3;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C99A9A;
+    }
+
+    /* Editorial Hairline Divider */
+    .editorial-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(232, 196, 196, 0.8) 25%, rgba(212, 175, 55, 0.5) 50%, rgba(232, 196, 196, 0.8) 75%, transparent 100%);
+    }
+
+    /* Timeline Vertical Connector */
+    .timeline-spine {
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, rgba(232, 196, 196, 0.85) 15%, rgba(212, 175, 55, 0.65) 50%, rgba(232, 196, 196, 0.85) 85%, rgba(212, 175, 55, 0.15) 100%);
+    }
+
+    /* Glass Card Border Glow */
+    .milk-glass {
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+  </style>
+</head>
+
+<body class="font-sans text-espresso selection:bg-petal selection:text-espresso">
+
+  <!-- Ambient Floating Snow & Blush Rose Petal Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Frosted Navigation Bar -->
+  <header id="navbar"
+    class="fixed top-0 left-0 right-0 z-40 transition-all duration-500 bg-white/75 backdrop-blur-md border-b border-rose-100/60">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
+      <!-- Monogram / Couple Brand -->
+      <a href="#hero" class="group flex items-center gap-3 focus:outline-none">
+        <span
+          class="w-9 h-9 rounded-full bg-petal/60 border border-champagne-gold/30 flex items-center justify-center font-serif italic text-lg text-espresso group-hover:bg-petal transition-colors">
+          D<span class="text-rosegold text-xs mx-0.5">&amp;</span>L
+        </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg sm:text-xl tracking-wide text-espresso font-medium leading-none">David &amp;
+            Linda</span>
+          <span class="text-[10px] uppercase tracking-[0.24em] text-taupe mt-0.5">Lake Tahoe • Engagement</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+        <a href="#sanctuary" class="hover:text-espresso transition-colors py-1">The Sanctuary</a>
+        <a href="#cadence" class="hover:text-espresso transition-colors py-1">Weekend Cadence</a>
+        <a href="#style-logistics" class="hover:text-espresso transition-colors py-1">Style &amp; Travel</a>
+        <a href="#guest-hub" class="hover:text-espresso transition-colors py-1">Guest Sync</a>
+      </nav>
+
+      <!-- Right Action Pill -->
+      <div class="flex items-center gap-2.5">
+        <button id="toggle-particles" type="button" title="Toggle snow &amp; petal ambiance"
+          class="p-2 rounded-full bg-ivory/90 hover:bg-petal/60 border border-stone-200/60 text-taupe hover:text-espresso transition-colors text-xs flex items-center gap-1.5">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-champagne-warm"></i>
+          <span class="hidden sm:inline text-[11px] tracking-wider uppercase" id="particle-status">Snow: On</span>
+        </button>
+        <a href="#guest-hub"
+          class="px-4 py-2 rounded-full bg-petal/70 hover:bg-petal/95 border border-petal-medium/60 text-espresso text-xs uppercase tracking-[0.15em] font-medium transition-all shadow-sm">
+          RSVP &amp; Sync
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       1. HERO SECTION
+       ========================================== -->
+  <section id="hero"
+    class="relative min-h-screen pt-28 pb-20 sm:pt-36 sm:pb-28 flex items-center justify-center overflow-hidden bg-luminous-gradient">
+    <!-- Decorative Ambient Aura Blobs -->
+    <div class="absolute top-16 left-1/4 w-96 h-96 bg-petal/40 rounded-full blur-3xl pointer-events-none"
+      aria-hidden="true"></div>
+    <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-champagne/30 rounded-full blur-3xl pointer-events-none"
+      aria-hidden="true"></div>
+
+    <!-- Subtle Botanical Line-Art Watermark (Top Right & Bottom Left) -->
+    <svg class="absolute top-20 right-4 sm:right-12 w-56 sm:w-80 text-petal-medium/30 pointer-events-none select-none"
+      viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M220 20C170 50 130 110 110 190M110 190C85 150 60 135 25 130M110 190C140 155 180 140 225 145"
+        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+      <path d="M165 65C150 40 120 35 100 50C115 70 145 75 165 65Z" stroke="currentColor" stroke-width="1.1" />
+      <path d="M140 110C165 95 195 100 210 120C185 130 155 125 140 110Z" stroke="currentColor" stroke-width="1.1" />
+      <circle cx="168" cy="62" r="18" stroke="currentColor" stroke-width="0.9" stroke-dasharray="2 3" />
+      <circle cx="110" cy="190" r="4" fill="currentColor" />
+    </svg>
+
+    <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Botanical Crest Icon -->
+      <div class="inline-flex items-center justify-center mb-5">
+        <svg class="w-12 h-8 text-champagne-warm/80" viewBox="0 0 80 42" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M40 36C40 22 25 10 8 8C10 22 24 32 40 36Z" stroke="currentColor" stroke-width="1.2" />
+          <path d="M40 36C40 22 55 10 72 8C70 22 56 32 40 36Z" stroke="currentColor" stroke-width="1.2" />
+          <path d="M40 38V6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+          <circle cx="40" cy="5" r="2.5" fill="#E8C4C4" />
+        </svg>
+      </div>
+
+      <!-- Subtle Top Badge -->
+      <div class="mb-6">
+        <span
+          class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/85 backdrop-blur-md border border-rose-100/80 shadow-sm text-[11px] sm:text-xs uppercase tracking-[0.26em] text-rosegold font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-champagne-gold animate-pulse"></span>
+          AN INTIMATE WINTER CELEBRATION • LAKE TAHOE
+          <span class="w-1.5 h-1.5 rounded-full bg-champagne-gold animate-pulse"></span>
+        </span>
+      </div>
+
+      <!-- Main Title -->
+      <h1
+        class="font-serif text-5xl sm:text-7xl md:text-8xl font-normal tracking-tight text-espresso leading-[1.06] mb-6">
+        The Engagement <span class="italic font-light text-rosegold">Weekend</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p
+        class="max-w-2xl mx-auto font-serif text-xl sm:text-2xl md:text-[26px] italic text-taupe font-normal leading-relaxed mb-10">
+        “Sixteen of our favorite hearts, fresh Sierra snow, candlelight toasts, and an unforgettable mountain escape.”
+      </p>
+
+      <!-- Elegant Pill Bar: Dates, Location, Party Size -->
+      <div
+        class="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-0 p-1.5 sm:px-3 sm:py-2 rounded-2xl sm:rounded-full milk-glass border border-rose-100/70 shadow-frosted mb-10">
+        <!-- Pill 1: Dates -->
+        <div class="flex items-center gap-2.5 px-4 py-2">
+          <i data-lucide="calendar-heart" class="w-4 h-4 text-rosegold shrink-0"></i>
+          <div class="text-left">
+            <span class="block text-[10px] uppercase tracking-[0.2em] text-taupe">Dates</span>
+            <span class="text-xs sm:text-sm font-medium text-espresso" id="pill-dates-display">Winter Weekend
+              (Fri–Sun)</span>
+          </div>
+        </div>
+
+        <div class="hidden sm:block h-7 w-px bg-rose-200/50"></div>
+
+        <!-- Pill 2: Location -->
+        <div class="flex items-center gap-2.5 px-4 py-2">
+          <i data-lucide="mountain-snow" class="w-4 h-4 text-champagne-warm shrink-0"></i>
+          <div class="text-left">
+            <span class="block text-[10px] uppercase tracking-[0.2em] text-taupe">Location</span>
+            <span class="text-xs sm:text-sm font-medium text-espresso">Lake Tahoe, CA</span>
+          </div>
+        </div>
+
+        <div class="hidden sm:block h-7 w-px bg-rose-200/50"></div>
+
+        <!-- Pill 3: Party Size -->
+        <div class="flex items-center gap-2.5 px-4 py-2">
+          <i data-lucide="sparkles" class="w-4 h-4 text-rosegold shrink-0"></i>
+          <div class="text-left">
+            <span class="block text-[10px] uppercase tracking-[0.2em] text-taupe">Gathering</span>
+            <span class="text-xs sm:text-sm font-medium text-espresso">16 Guests</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Countdown Timer Card -->
+      <div class="max-w-xl mx-auto milk-glass rounded-3xl border border-rose-100/80 shadow-frosted p-6 sm:p-7 mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-[11px] uppercase tracking-[0.24em] text-taupe font-medium flex items-center gap-1.5">
+            <i data-lucide="flame" class="w-3.5 h-3.5 text-champagne-warm"></i>
+            Countdown to Fireside Champagne
+          </span>
+          <button id="customize-date-btn" type="button"
+            class="text-[11px] text-rosegold hover:text-espresso underline decoration-petal-medium underline-offset-4 transition-colors">
+            <span id="target-date-label">Jan 15–17, 2027</span>
+          </button>
+        </div>
+
+        <!-- Optional Date Customizer Row (Hidden by default) -->
+        <div id="date-picker-drawer"
+          class="hidden mb-4 p-3 rounded-2xl bg-ivory/90 border border-stone-200/70 flex flex-wrap items-center justify-between gap-2 text-xs">
+          <label for="trip-date-input" class="text-taupe font-medium">Set Friday Arrival Date:</label>
+          <div class="flex items-center gap-2">
+            <input type="date" id="trip-date-input"
+              class="px-3 py-1.5 rounded-lg bg-white border border-rose-200/70 text-espresso text-xs focus:outline-none focus:border-rosegold" />
+            <button id="save-date-btn" type="button"
+              class="px-3 py-1.5 rounded-lg bg-petal hover:bg-petal-medium/70 text-espresso font-medium transition-colors">
+              Update
+            </button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-3 sm:gap-5 text-center">
+          <div class="p-3 sm:p-4 rounded-2xl bg-ivory/75 border border-rose-100/60">
+            <span id="cd-days"
+              class="block font-serif text-3xl sm:text-5xl text-espresso font-normal tracking-tight">74</span>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-taupe mt-1 block">Days</span>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-ivory/75 border border-rose-100/60">
+            <span id="cd-hours"
+              class="block font-serif text-3xl sm:text-5xl text-espresso font-normal tracking-tight">16</span>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-taupe mt-1 block">Hours</span>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-ivory/75 border border-rose-100/60">
+            <span id="cd-minutes"
+              class="block font-serif text-3xl sm:text-5xl text-espresso font-normal tracking-tight">42</span>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-taupe mt-1 block">Minutes</span>
+          </div>
+          <div class="p-3 sm:p-4 rounded-2xl bg-ivory/75 border border-rose-100/60">
+            <span id="cd-seconds"
+              class="block font-serif text-3xl sm:text-5xl text-rosegold font-normal tracking-tight">08</span>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-rosegold mt-1 block">Seconds</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smooth CTA Button -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#sanctuary"
+          class="btn-shimmer inline-flex items-center gap-3 px-8 py-4 rounded-full bg-rose-shimmer border border-champagne-gold/40 text-espresso font-medium text-xs sm:text-sm uppercase tracking-[0.2em] shadow-champagne hover:shadow-frosted-hover hover:-translate-y-0.5 transition-all duration-300">
+          <span>Weekend Details &amp; Cabin</span>
+          <i data-lucide="arrow-down-right" class="w-4 h-4 text-espresso"></i>
+        </a>
+        <a href="#cadence"
+          class="inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white/80 hover:bg-white border border-stone-200/70 text-taupe hover:text-espresso text-xs uppercase tracking-[0.2em] transition-all">
+          <span>View Weekend Cadence</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delicate Floral Divider -->
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="editorial-line"></div>
+  </div>
+
+  <!-- ==========================================
+       2. THE CABIN & LODGING SECTION
+       ========================================== -->
+  <section id="sanctuary" class="relative py-24 sm:py-32 px-4 sm:px-6 bg-alabaster">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Heading -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-rosegold font-medium block mb-3">
+          01 • Private Alpine Estate
+        </span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-espresso font-normal tracking-tight mb-4">
+          The Mountain <span class="italic font-light text-rosegold">Sanctuary</span>
+        </h2>
+        <p class="font-serif italic text-xl sm:text-2xl text-taupe">
+          “Where cozy firesides meet champagne toasts and snowy views.”
+        </p>
+      </div>
+
+      <!-- Shared Amenities 4-Card Showcase -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14 reveal">
+        <!-- Amenity 1: Panoramic Snowy Decks -->
+        <div
+          class="milk-glass rounded-3xl p-6 border border-rose-100/70 shadow-sm hover:shadow-frosted transition-all duration-300 group">
+          <div
+            class="w-11 h-11 rounded-2xl bg-petal/60 border border-rose-200/50 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+            <i data-lucide="trees" class="w-5 h-5 text-rosegold"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-espresso font-medium mb-2">Panoramic Snowy Decks</h3>
+          <p class="text-sm text-taupe leading-relaxed">
+            Towering sugar pines, crisp alpine air, and wrap-around balconies made for golden-hour photography and
+            sunset aperitifs.
+          </p>
+        </div>
+
+        <!-- Amenity 2: Steaming Hot Tub -->
+        <div
+          class="milk-glass rounded-3xl p-6 border border-rose-100/70 shadow-sm hover:shadow-frosted transition-all duration-300 group">
+          <div
+            class="w-11 h-11 rounded-2xl bg-champagne/40 border border-champagne-gold/30 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+            <i data-lucide="waves" class="w-5 h-5 text-champagne-bronze"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-espresso font-medium mb-2">Steaming Hot Tub</h3>
+          <p class="text-sm text-taupe leading-relaxed">
+            Soak beneath snow-dusted evergreens and mountain stars with chilled prosecco after a full day carving the
+            Sierra peaks.
+          </p>
+        </div>
+
+        <!-- Amenity 3: Spacious Gathering Salon -->
+        <div
+          class="milk-glass rounded-3xl p-6 border border-rose-100/70 shadow-sm hover:shadow-frosted transition-all duration-300 group">
+          <div
+            class="w-11 h-11 rounded-2xl bg-petal/60 border border-rose-200/50 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+            <i data-lucide="flame" class="w-5 h-5 text-rosegold"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-espresso font-medium mb-2">Spacious Gathering Salon</h3>
+          <p class="text-sm text-taupe leading-relaxed">
+            Vaulted timber ceilings, glowing hearthstone fireplace, and plush lounge seating built for all sixteen of us
+            to gather as one.
+          </p>
+        </div>
+
+        <!-- Amenity 4: Chef's Kitchen -->
+        <div
+          class="milk-glass rounded-3xl p-6 border border-rose-100/70 shadow-sm hover:shadow-frosted transition-all duration-300 group">
+          <div
+            class="w-11 h-11 rounded-2xl bg-champagne/40 border border-champagne-gold/30 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+            <i data-lucide="utensils-crossed" class="w-5 h-5 text-champagne-bronze"></i>
+          </div>
+          <h3 class="font-serif text-2xl text-espresso font-medium mb-2">Chef’s Kitchen &amp; Table</h3>
+          <p class="text-sm text-taupe leading-relaxed">
+            Expansive marble islands, wine chillers, and a grand candlelit dining space for Friday family dinner and
+            Saturday’s soirée.
+          </p>
+        </div>
+      </div>
+
+      <!-- Two Frosted Action Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7 reveal">
+        <!-- Card 1: The Residence -->
+        <div
+          class="relative overflow-hidden rounded-3xl milk-glass border border-rose-100/80 shadow-frosted p-8 sm:p-10 flex flex-col justify-between group hover:border-petal-medium transition-all duration-500">
+          <div class="absolute -right-10 -top-10 w-44 h-44 bg-petal/35 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-ivory border border-stone-200/70 text-[11px] uppercase tracking-[0.2em] text-taupe mb-6">
+              <i data-lucide="home" class="w-3.5 h-3.5 text-rosegold"></i>
+              <span>The Residence</span>
+            </div>
+
+            <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal mb-3">
+              Explore Our Lake Tahoe Retreat
+            </h3>
+            <p class="text-sm sm:text-base text-taupe leading-relaxed mb-8">
+              Browse the full photo gallery, architectural layout, alpine decks, and mountain surroundings of our
+              private weekend home on Airbnb.
+            </p>
+          </div>
+
+          <div>
+            <a href="https://www.airbnb.com/rooms/1533107665252646579?source_impression_id=p3_1793562693_P3m4186kMCIKa663"
+              target="_blank" rel="noopener noreferrer"
+              class="btn-shimmer inline-flex items-center justify-between w-full sm:w-auto gap-4 px-7 py-4 rounded-full bg-espresso text-snow text-xs uppercase tracking-[0.2em] font-medium hover:bg-espresso/90 transition-all shadow-sm">
+              <span>Tour the Cabin</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-petal-medium"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Guest Group -->
+        <div
+          class="relative overflow-hidden rounded-3xl milk-glass border border-champagne-gold/30 shadow-frosted p-8 sm:p-10 flex flex-col justify-between group hover:border-champagne-warm transition-all duration-500">
+          <div class="absolute -right-10 -top-10 w-44 h-44 bg-champagne/35 rounded-full blur-2xl pointer-events-none">
+          </div>
+
+          <div>
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-ivory border border-stone-200/70 text-[11px] uppercase tracking-[0.2em] text-taupe mb-6">
+              <i data-lucide="users" class="w-3.5 h-3.5 text-champagne-bronze"></i>
+              <span>Guest Group • 16 Hearts</span>
+            </div>
+
+            <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal mb-3">
+              Official Airbnb Trip Roster
+            </h3>
+            <p class="text-sm sm:text-base text-taupe leading-relaxed mb-8">
+              Join the official Airbnb reservation group to unlock direct check-in instructions, door access codes,
+              Wi-Fi details, and exact pin location.
+            </p>
+          </div>
+
+          <div>
+            <a href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
+              target="_blank" rel="noopener noreferrer"
+              class="btn-shimmer inline-flex items-center justify-between w-full sm:w-auto gap-4 px-7 py-4 rounded-full bg-rose-shimmer border border-champagne-gold/40 text-espresso text-xs uppercase tracking-[0.2em] font-medium hover:shadow-champagne transition-all">
+              <span>Join Co-Travelers</span>
+              <i data-lucide="user-plus" class="w-4 h-4 text-espresso"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delicate Floral Divider -->
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="editorial-line"></div>
+  </div>
+
+  <!-- ==========================================
+       3. WEEKEND CADENCE (EDITORIAL TIMELINE)
+       ========================================== -->
+  <section id="cadence" class="relative py-24 sm:py-32 px-4 sm:px-6 bg-ivory/60">
+    <div class="max-w-5xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 sm:mb-20 reveal">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-rosegold font-medium block mb-3">
+          02 • The Itinerary
+        </span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-espresso font-normal tracking-tight mb-4">
+          Weekend <span class="italic font-light text-rosegold">Cadence</span>
+        </h2>
+        <p class="font-serif italic text-xl sm:text-2xl text-taupe">
+          Unrushed alpine mornings, powder tracks, and candlelit celebration.
+        </p>
+      </div>
+
+      <!-- Editorial Timeline Wrapper -->
+      <div class="relative">
+        <!-- Vertical Spine (visible on md+) -->
+        <div class="hidden md:block absolute left-8 top-6 bottom-6 w-px timeline-spine" aria-hidden="true"></div>
+
+        <div class="space-y-12 sm:space-y-16">
+          <!-- DAY 1: FRIDAY -->
+          <article class="relative md:pl-24 reveal">
+            <!-- Timeline Node Badge -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-10 h-10 rounded-full bg-white border border-rose-200 shadow-sm items-center justify-center font-serif italic text-base text-rosegold">
+              I
+            </div>
+
+            <div class="milk-glass rounded-3xl border border-rose-100/80 shadow-frosted p-7 sm:p-10">
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-6 mb-6 border-b border-rose-100/70">
+                <div>
+                  <span class="text-[11px] uppercase tracking-[0.24em] text-rosegold font-semibold block mb-1">Day One •
+                    Friday</span>
+                  <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">
+                    Welcome &amp; Fireside Champagne
+                  </h3>
+                </div>
+                <span
+                  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-petal/50 border border-petal-medium/50 text-xs text-espresso font-medium">
+                  <i data-lucide="wine" class="w-3.5 h-3.5 text-rosegold"></i>
+                  Cozy Cabin Arrival
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                <div class="md:col-span-4">
+                  <span
+                    class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+                    <i data-lucide="clock" class="w-3.5 h-3.5 text-champagne-warm"></i>
+                    Late Afternoon / Evening
+                  </span>
+                  <p class="font-serif italic text-lg text-rosegold mt-1">Exhale into mountain time</p>
+                </div>
+                <div class="md:col-span-8">
+                  <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                    Cabin arrivals, snow gear drop, welcome glasses of chilled bubbly, and a warm family-style dinner by
+                    the fire. Settle in with cashmere throws, vinyl playlists, and our first toast together as everyone
+                    arrives from the mountain pass.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- DAY 2: SATURDAY -->
+          <article class="relative md:pl-24 reveal">
+            <!-- Timeline Node Badge -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-10 h-10 rounded-full bg-petal border border-champagne-gold/50 shadow-sm items-center justify-center font-serif italic text-base text-espresso">
+              II
+            </div>
+
+            <div
+              class="milk-glass rounded-3xl border border-champagne-gold/40 shadow-frosted p-7 sm:p-10 relative overflow-hidden">
+              <!-- Subtle Rose Glow Corner -->
+              <div class="absolute -top-16 -right-16 w-56 h-56 bg-petal/45 rounded-full blur-3xl pointer-events-none">
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-6 mb-8 border-b border-rose-100/70">
+                <div>
+                  <span
+                    class="text-[11px] uppercase tracking-[0.24em] text-champagne-bronze font-semibold block mb-1">Day
+                    Two • Saturday</span>
+                  <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">
+                    Snow Tracks &amp; The Engagement Soirée
+                  </h3>
+                </div>
+                <span
+                  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-shimmer border border-champagne-gold/40 text-xs text-espresso font-medium">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-champagne-bronze"></i>
+                  Main Celebration Day
+                </span>
+              </div>
+
+              <div class="space-y-8">
+                <!-- Daytime Options (Two Tracks) -->
+                <div>
+                  <div class="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-taupe font-medium mb-4">
+                    <i data-lucide="sun-snow" class="w-4 h-4 text-champagne-warm"></i>
+                    <span>Daytime Options • Choose Your Adventure</span>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Track 1 -->
+                    <div
+                      class="rounded-2xl bg-ivory/90 border border-stone-200/80 p-6 hover:border-petal-medium transition-colors">
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-rosegold font-semibold">Track 01 •
+                          Alpine</span>
+                        <i data-lucide="mountain" class="w-4 h-4 text-taupe"></i>
+                      </div>
+                      <h4 class="font-serif text-2xl text-espresso font-medium mb-2">The Slopes</h4>
+                      <p class="text-sm text-taupe leading-relaxed">
+                        Powder runs, corduroy groomers, and panoramic mountain vistas across Tahoe for our skiers and
+                        snowboarders.
+                      </p>
+                    </div>
+
+                    <!-- Track 2 -->
+                    <div
+                      class="rounded-2xl bg-ivory/90 border border-stone-200/80 p-6 hover:border-petal-medium transition-colors">
+                      <div class="flex items-center justify-between mb-2">
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-champagne-bronze font-semibold">Track
+                          02 • Sanctuary</span>
+                        <i data-lucide="coffee" class="w-4 h-4 text-taupe"></i>
+                      </div>
+                      <h4 class="font-serif text-2xl text-espresso font-medium mb-2">Lodge &amp; Village Indulgence</h4>
+                      <p class="text-sm text-taupe leading-relaxed">
+                        Steaming hot tub morning, fireside espresso &amp; artisanal tea, unhurried reading, or strolling
+                        scenic lakeside spots.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Late Afternoon -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pt-6 border-t border-rose-100/60 items-start">
+                  <div class="md:col-span-4">
+                    <span
+                      class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+                      <i data-lucide="sunset" class="w-3.5 h-3.5 text-rosegold"></i>
+                      Late Afternoon
+                    </span>
+                    <p class="font-serif italic text-lg text-rosegold mt-0.5">Golden Alpine Glow</p>
+                  </div>
+                  <div class="md:col-span-8">
+                    <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                      <strong>Frosted Sunset Cocktails on the Deck</strong> — Reunite after the mountain adventures as
+                      alpenglow paints the Sierra peaks in blush and gold.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Evening Highlight Box: The Engagement Celebration -->
+                <div
+                  class="rounded-2xl bg-gradient-to-br from-petal/50 via-white to-champagne/35 border border-champagne-gold/40 p-6 sm:p-8 shadow-sm">
+                  <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <span
+                      class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-champagne-bronze font-semibold">
+                      <i data-lucide="heart" class="w-3.5 h-3.5 text-rosegold fill-petal-medium"></i>
+                      Saturday Evening • The Main Event
+                    </span>
+                    <span class="text-xs uppercase tracking-[0.18em] text-rosegold font-medium">Attire: Romantic Winter
+                      Chic</span>
+                  </div>
+                  <h4 class="font-serif text-2xl sm:text-3xl text-espresso font-normal mb-2">
+                    The Engagement Celebration
+                  </h4>
+                  <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                    An intimate candlelight dinner adorned with white garden roses and blush petals, curated vintage
+                    wines, heartfelt speeches, champagne towers, and dancing under the mountain stars.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- DAY 3: SUNDAY -->
+          <article class="relative md:pl-24 reveal">
+            <!-- Timeline Node Badge -->
+            <div
+              class="hidden md:flex absolute left-3 top-6 w-10 h-10 rounded-full bg-white border border-rose-200 shadow-sm items-center justify-center font-serif italic text-base text-rosegold">
+              III
+            </div>
+
+            <div class="milk-glass rounded-3xl border border-rose-100/80 shadow-frosted p-7 sm:p-10">
+              <div class="flex flex-wrap items-center justify-between gap-3 pb-6 mb-6 border-b border-rose-100/70">
+                <div>
+                  <span class="text-[11px] uppercase tracking-[0.24em] text-rosegold font-semibold block mb-1">Day Three
+                    • Sunday</span>
+                  <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal">
+                    Morning Light &amp; The Return
+                  </h3>
+                </div>
+                <span
+                  class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-ivory border border-stone-200/80 text-xs text-taupe font-medium">
+                  <i data-lucide="camera" class="w-3.5 h-3.5 text-champagne-warm"></i>
+                  Farewell &amp; Group Portrait
+                </span>
+              </div>
+
+              <div class="space-y-6">
+                <!-- Morning -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-start">
+                  <div class="md:col-span-4">
+                    <span
+                      class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+                      <i data-lucide="sunrise" class="w-3.5 h-3.5 text-champagne-warm"></i>
+                      Morning
+                    </span>
+                  </div>
+                  <div class="md:col-span-8">
+                    <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                      Slow pour-over coffee, warm flaky pastries, tidy &amp; cabin checkout, and our tradition group
+                      photo on the snowy steps.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Midday Optional -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pt-5 border-t border-rose-100/60 items-start">
+                  <div class="md:col-span-4">
+                    <span
+                      class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+                      <i data-lucide="snowflake" class="w-3.5 h-3.5 text-rosegold"></i>
+                      Midday (Optional)
+                    </span>
+                  </div>
+                  <div class="md:col-span-8">
+                    <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                      Post-checkout bonus ski session for anyone craving extra slope time under the Sunday sun.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Evening En Route -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 pt-5 border-t border-rose-100/60 items-start">
+                  <div class="md:col-span-4">
+                    <span
+                      class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-taupe font-medium">
+                      <i data-lucide="utensils" class="w-3.5 h-3.5 text-champagne-warm"></i>
+                      Evening (En Route)
+                    </span>
+                  </div>
+                  <div class="md:col-span-8">
+                    <p class="text-sm sm:text-base text-espresso/90 leading-relaxed">
+                      Farewell group dinner in <strong>Sacramento</strong> on the drive back down the mountain <span
+                        class="italic text-taupe">(restaurant TBD — vote in the group chat!)</span>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delicate Floral Divider -->
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="editorial-line"></div>
+  </div>
+
+  <!-- ==========================================
+       4. STYLE GUIDE & MOUNTAIN LOGISTICS
+       ========================================== -->
+  <section id="style-logistics" class="relative py-24 sm:py-32 px-4 sm:px-6 bg-alabaster">
+    <div class="max-w-6xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-rosegold font-medium block mb-3">
+          03 • Lookbook &amp; Mountain Passage
+        </span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-espresso font-normal tracking-tight mb-4">
+          Style Guide &amp; <span class="italic font-light text-rosegold">Logistics</span>
+        </h2>
+        <p class="font-serif italic text-xl sm:text-2xl text-taupe">
+          Curated winter textures for the lens, and smooth travels across the Sierra pass.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Dress Code & Palette Guide (7 columns on lg) -->
+        <div
+          class="lg:col-span-7 milk-glass rounded-3xl border border-rose-100/80 shadow-frosted p-8 sm:p-10 flex flex-col justify-between reveal">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-xs uppercase tracking-[0.22em] text-rosegold font-semibold flex items-center gap-2">
+                <i data-lucide="shirt" class="w-4 h-4"></i>
+                Dress Code &amp; Palette Guide
+              </span>
+              <span class="text-xs font-serif italic text-taupe">Luminous Winter Tones</span>
+            </div>
+
+            <!-- Interactive Color Swatches -->
+            <div class="mb-8">
+              <p class="text-xs uppercase tracking-[0.18em] text-taupe mb-3">Weekend Color Story</p>
+              <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#FFFFFF] border border-stone-200 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Snow White</span>
+                </div>
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#F7F5F0] border border-stone-200 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Warm Ivory</span>
+                </div>
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#F6E5E5] border border-rose-200/70 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Petal Blush</span>
+                </div>
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#E8C4C4] border border-rose-200 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Dusty Rose</span>
+                </div>
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#DFD3C3] border border-stone-300 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Champagne</span>
+                </div>
+                <div class="group text-center">
+                  <div
+                    class="h-12 rounded-2xl bg-[#2C2A29] border border-stone-700 shadow-sm mb-1.5 group-hover:scale-105 transition-transform">
+                  </div>
+                  <span class="block text-[10px] uppercase tracking-wider text-taupe">Espresso</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Three Attire Moments -->
+            <div class="space-y-5">
+              <!-- Cabin Daytime -->
+              <div class="p-5 rounded-2xl bg-ivory/80 border border-stone-200/70">
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="font-serif text-2xl text-espresso font-medium">Cabin Daytime</h3>
+                  <span class="text-[11px] uppercase tracking-[0.18em] text-taupe">Après-Ski Cozy</span>
+                </div>
+                <p class="text-sm text-taupe leading-relaxed">
+                  Cozy luxury knits, cream cashmeres, warm winter pastels, shearling slippers, and your favorite snow
+                  gear for the mountain.
+                </p>
+              </div>
+
+              <!-- Saturday Celebration -->
+              <div class="p-5 rounded-2xl bg-petal/35 border border-petal-medium/60">
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="font-serif text-2xl text-espresso font-medium">Saturday Celebration</h3>
+                  <span class="text-[11px] uppercase tracking-[0.18em] text-rosegold font-semibold">Romantic Winter
+                    Chic</span>
+                </div>
+                <p class="text-sm text-espresso/85 leading-relaxed">
+                  Soft whites, light blush, champagne silk or satin, tailored winter wool, and elevated evening
+                  formalwear for our candlelit dinner &amp; portraits.
+                </p>
+              </div>
+
+              <!-- Hot Tub -->
+              <div class="p-5 rounded-2xl bg-ivory/80 border border-stone-200/70">
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="font-serif text-2xl text-espresso font-medium">Alpine Hot Tub</h3>
+                  <span class="text-[11px] uppercase tracking-[0.18em] text-taupe">Starlight Soak</span>
+                </div>
+                <p class="text-sm text-taupe leading-relaxed">
+                  Swimsuits, plush cozy robes, warm beanies, and easy slip-on snow sandals for stepping onto the frosted
+                  deck.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caltrans Mountain Travel Notice (5 columns on lg) -->
+        <div
+          class="lg:col-span-5 milk-glass rounded-3xl border border-champagne-gold/45 shadow-frosted p-8 sm:p-10 flex flex-col justify-between reveal">
+          <div>
+            <!-- Alert Header Pill -->
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-champagne/40 border border-champagne-gold/40 text-[11px] uppercase tracking-[0.2em] text-champagne-bronze font-semibold mb-6">
+              <i data-lucide="shield-alert" class="w-4 h-4 text-champagne-bronze"></i>
+              <span>Caltrans Mountain Travel Notice</span>
+            </div>
+
+            <h3 class="font-serif text-3xl sm:text-4xl text-espresso font-normal mb-3">
+              Sierra Winter Driving Advisory
+            </h3>
+            <p class="text-sm text-taupe leading-relaxed mb-6">
+              Winter weather in the High Sierra can shift rapidly. Before ascending either mountain corridor, please
+              ensure your vehicle is winter-ready.
+            </p>
+
+            <!-- Route Check Cards -->
+            <div class="space-y-3.5 mb-7">
+              <div class="p-4 rounded-2xl bg-ivory/90 border border-stone-200/80 flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-xl bg-petal/60 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="navigation" class="w-4 h-4 text-rosegold"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs uppercase tracking-[0.16em] text-espresso font-semibold">Primary Corridors</h4>
+                  <p class="text-xs sm:text-sm text-taupe mt-0.5">
+                    <strong>Donner Pass (I-80)</strong> &amp; <strong>Echo Summit (US-50)</strong> actively enforce
+                    Caltrans R1/R2 chain controls during snowfalls.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-ivory/90 border border-stone-200/80 flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-xl bg-champagne/45 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="car-front" class="w-4 h-4 text-champagne-bronze"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs uppercase tracking-[0.16em] text-espresso font-semibold">Mandatory Traction
+                    Requirement</h4>
+                  <p class="text-xs sm:text-sm text-taupe mt-0.5">
+                    Travel in an <strong>AWD / 4WD vehicle with snow-rated tires (M+S)</strong>, and legally carry
+                    properly sized <strong>tire chains/cables</strong> in the trunk.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-2xl bg-ivory/90 border border-stone-200/80 flex items-start gap-3.5">
+                <div class="w-8 h-8 rounded-xl bg-petal/60 flex items-center justify-center shrink-0 mt-0.5">
+                  <i data-lucide="thermometer-snowflake" class="w-4 h-4 text-rosegold"></i>
+                </div>
+                <div>
+                  <h4 class="text-xs uppercase tracking-[0.16em] text-espresso font-semibold">Cabin Driveway Tip</h4>
+                  <p class="text-xs sm:text-sm text-taupe mt-0.5">
+                    Pack a windshield ice scraper, warm gloves, and coordinate carpools below so we bring only our
+                    best-equipped winter SUVs up the hill.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Caltrans QuickMap Outbound Button -->
+          <div class="pt-4 border-t border-rose-100/70">
+            <a href="https://quickmap.dot.ca.gov/" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center justify-between w-full px-6 py-4 rounded-full bg-espresso hover:bg-espresso/90 text-snow text-xs uppercase tracking-[0.2em] font-medium transition-all shadow-sm">
+              <span>Check Caltrans QuickMap Live</span>
+              <i data-lucide="external-link" class="w-4 h-4 text-champagne-gold"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delicate Floral Divider -->
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="editorial-line"></div>
+  </div>
+
+  <!-- ==========================================
+       5. CARPOOL & GUEST PREFERENCES HUB
+       ========================================== -->
+  <section id="guest-hub" class="relative py-24 sm:py-32 px-4 sm:px-6 bg-luminous-gradient">
+    <div class="max-w-4xl mx-auto">
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <span class="text-[11px] uppercase tracking-[0.28em] text-rosegold font-medium block mb-3">
+          04 • Concierge &amp; Carpool Sync
+        </span>
+        <h2 class="font-serif text-4xl sm:text-6xl text-espresso font-normal tracking-tight mb-4">
+          Guest Preferences <span class="italic font-light text-rosegold">Hub</span>
+        </h2>
+        <p class="font-serif italic text-xl sm:text-2xl text-taupe">
+          Help us stock the wine cellar, pair up AWD carpools, and plan Saturday’s tracks.
+        </p>
+      </div>
+
+      <!-- High-Touch Interactive Sync Card -->
+      <div class="milk-glass rounded-3xl border border-rose-100/90 shadow-frosted p-7 sm:p-12 reveal">
+        <!-- Three Pillar Summary Badges -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+          <div class="p-4 rounded-2xl bg-ivory/80 border border-rose-100/80 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-petal/60 flex items-center justify-center shrink-0">
+              <i data-lucide="car" class="w-5 h-5 text-rosegold"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-taupe block">01 • Transit</span>
+              <span class="font-serif text-lg text-espresso font-medium">Arrival &amp; Carpool Seats</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-ivory/80 border border-rose-100/80 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-champagne/40 flex items-center justify-center shrink-0">
+              <i data-lucide="compass" class="w-5 h-5 text-champagne-bronze"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-taupe block">02 • Saturday</span>
+              <span class="font-serif text-lg text-espresso font-medium">Ikon / Epic / Cabin Lounge</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-ivory/80 border border-rose-100/80 flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-petal/60 flex items-center justify-center shrink-0">
+              <i data-lucide="glass-water" class="w-5 h-5 text-rosegold"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase tracking-[0.2em] text-taupe block">03 • Cellar &amp; Table</span>
+              <span class="font-serif text-lg text-espresso font-medium">Dietary &amp; Favorite Drinks</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Note Builder Form -->
+        <form id="guest-sync-form" class="space-y-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Guest Name(s) -->
+            <div>
+              <label for="guest-name" class="block text-xs uppercase tracking-[0.18em] text-taupe font-medium mb-2">
+                Your Name(s)
+              </label>
+              <input type="text" id="guest-name" placeholder="e.g., Alex & Jordan" required
+                class="w-full px-4 py-3.5 rounded-2xl bg-white/90 border border-stone-200/90 text-sm text-espresso placeholder:text-taupe/50 focus:outline-none focus:border-rosegold transition-colors" />
+            </div>
+
+            <!-- Friday Arrival Window & Carpool -->
+            <div>
+              <label for="carpool-status" class="block text-xs uppercase tracking-[0.18em] text-taupe font-medium mb-2">
+                Friday Arrival &amp; Carpool Seats
+              </label>
+              <select id="carpool-status"
+                class="w-full px-4 py-3.5 rounded-2xl bg-white/90 border border-stone-200/90 text-sm text-espresso focus:outline-none focus:border-rosegold transition-colors">
+                <option value="Driving AWD/4WD • Have extra seats available">Driving AWD/4WD • Have extra seats
+                  available</option>
+                <option value="Driving AWD/4WD • Car is full">Driving AWD/4WD • Car is full</option>
+                <option value="Looking to hop into a carpool seat">Looking to hop into a carpool seat</option>
+                <option value="Arriving Friday Afternoon (3–6 PM)">Arriving Friday Afternoon (3–6 PM)</option>
+                <option value="Arriving Friday Evening (After 6 PM)">Arriving Friday Evening (After 6 PM)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Slope & Daytime Track Selector Pills -->
+          <div>
+            <label class="block text-xs uppercase tracking-[0.18em] text-taupe font-medium mb-2.5">
+              Saturday Daytime &amp; Pass Preference
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="slope-pills">
+              <label class="cursor-pointer">
+                <input type="radio" name="slope_track" value="Ikon Pass (Palisades)" class="peer sr-only" checked />
+                <div
+                  class="p-3.5 rounded-2xl bg-white/80 border border-stone-200/80 text-center text-xs font-medium text-taupe peer-checked:bg-petal/70 peer-checked:border-rosegold peer-checked:text-espresso transition-all">
+                  <i data-lucide="mountain-snow" class="w-4 h-4 mx-auto mb-1 text-rosegold"></i>
+                  Ikon Pass
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="slope_track" value="Epic Pass (Heavenly / Northstar)" class="peer sr-only" />
+                <div
+                  class="p-3.5 rounded-2xl bg-white/80 border border-stone-200/80 text-center text-xs font-medium text-taupe peer-checked:bg-petal/70 peer-checked:border-rosegold peer-checked:text-espresso transition-all">
+                  <i data-lucide="compass" class="w-4 h-4 mx-auto mb-1 text-champagne-bronze"></i>
+                  Epic Pass
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="slope_track" value="Cabin Lounge & Hot Tub" class="peer sr-only" />
+                <div
+                  class="p-3.5 rounded-2xl bg-white/80 border border-stone-200/80 text-center text-xs font-medium text-taupe peer-checked:bg-petal/70 peer-checked:border-rosegold peer-checked:text-espresso transition-all">
+                  <i data-lucide="flame" class="w-4 h-4 mx-auto mb-1 text-rosegold"></i>
+                  Cabin Lounge
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="slope_track" value="Flexible / Down for Both" class="peer sr-only" />
+                <div
+                  class="p-3.5 rounded-2xl bg-white/80 border border-stone-200/80 text-center text-xs font-medium text-taupe peer-checked:bg-petal/70 peer-checked:border-rosegold peer-checked:text-espresso transition-all">
+                  <i data-lucide="sparkles" class="w-4 h-4 mx-auto mb-1 text-champagne-bronze"></i>
+                  Mix of Both
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <!-- Dietary Preferences -->
+            <div>
+              <label for="dietary-notes" class="block text-xs uppercase tracking-[0.18em] text-taupe font-medium mb-2">
+                Dietary Preferences or Allergies
+              </label>
+              <input type="text" id="dietary-notes" placeholder="e.g., No shellfish, vegetarian, or none!"
+                class="w-full px-4 py-3.5 rounded-2xl bg-white/90 border border-stone-200/90 text-sm text-espresso placeholder:text-taupe/50 focus:outline-none focus:border-rosegold transition-colors" />
+            </div>
+
+            <!-- Celebratory Wine / Drinks -->
+            <div>
+              <label for="drink-notes" class="block text-xs uppercase tracking-[0.18em] text-taupe font-medium mb-2">
+                Favorite Celebratory Wine &amp; Drinks
+              </label>
+              <input type="text" id="drink-notes" placeholder="e.g., Brut Rosé, Pinot Noir, Reposado, Matcha"
+                class="w-full px-4 py-3.5 rounded-2xl bg-white/90 border border-stone-200/90 text-sm text-espresso placeholder:text-taupe/50 focus:outline-none focus:border-rosegold transition-colors" />
+            </div>
+          </div>
+
+          <!-- Sunday Sacramento Dinner Toggle -->
+          <div
+            class="p-4 rounded-2xl bg-ivory/90 border border-stone-200/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <i data-lucide="utensils-crossed" class="w-4 h-4 text-champagne-bronze"></i>
+              <span class="text-xs sm:text-sm text-espresso font-medium">Joining Sunday Farewell Dinner in
+                Sacramento?</span>
+            </div>
+            <select id="sunday-dinner"
+              class="px-3.5 py-2 rounded-xl bg-white border border-stone-200 text-xs font-medium text-espresso focus:outline-none focus:border-rosegold">
+              <option value="Yes, count us in for Sacramento dinner!">Yes, count us in!</option>
+              <option value="Plus Sunday midday bonus ski session!">Yes + Sunday bonus ski!</option>
+              <option value="Heading straight back Sunday morning">Heading straight back</option>
+            </select>
+          </div>
+
+          <!-- Feedback Toast Banner (Hidden until clicked) -->
+          <div id="sync-confirmation"
+            class="hidden p-4 rounded-2xl bg-petal/60 border border-rosegold/40 text-xs sm:text-sm text-espresso flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-rosegold shrink-0"></i>
+              <span id="sync-confirmation-text">Preferences formatted &amp; copied to your clipboard for the group
+                chat!</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons: Copy for Group Chat + Direct Airbnb Co-Traveler Sync -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center gap-4">
+            <button type="submit"
+              class="btn-shimmer w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-rose-shimmer border border-champagne-gold/50 text-espresso text-xs uppercase tracking-[0.2em] font-semibold shadow-champagne hover:shadow-frosted-hover transition-all">
+              <i data-lucide="message-square-heart" class="w-4 h-4 text-espresso"></i>
+              <span>Copy RSVP Card for Group Chat</span>
+            </button>
+
+            <a href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
+              target="_blank" rel="noopener noreferrer"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-espresso hover:bg-espresso/90 text-snow text-xs uppercase tracking-[0.2em] font-medium transition-all">
+              <span>Sync on Airbnb Roster</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4 text-champagne-gold"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. FOOTER
+       ========================================== -->
+  <footer class="relative bg-ivory border-t border-rose-100/80 py-20 px-4 sm:px-6 text-center overflow-hidden">
+    <div class="max-w-3xl mx-auto relative z-10">
+      <!-- Graceful Closing Monogram Emblem -->
+      <div class="inline-flex flex-col items-center mb-6">
+        <div
+          class="w-16 h-16 rounded-full bg-white border border-champagne-gold/40 shadow-frosted flex items-center justify-center font-serif italic text-2xl text-espresso mb-3">
+          D <span class="text-rosegold text-sm mx-1">&amp;</span> L
+        </div>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-rosegold">Forever Begins in the Sierra</span>
+      </div>
+
+      <!-- Closing Toast -->
+      <h2 class="font-serif text-3xl sm:text-4xl text-espresso font-normal mb-3">
+        To snow-covered pines, warm hearths, and <span class="italic text-rosegold">a lifetime ahead.</span>
+      </h2>
+      <p class="font-serif italic text-lg sm:text-xl text-taupe max-w-xl mx-auto mb-10">
+        “Thank you for being part of our inner circle of sixteen and celebrating this chapter with us in Lake Tahoe.”
+      </p>
+
+      <!-- Footer Quick Links: Playlist, Cabin Tour, Co-Traveler Group, Host Contact -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 hover:bg-petal/50 border border-stone-200/80 text-xs uppercase tracking-[0.18em] text-espresso transition-colors shadow-sm">
+          <i data-lucide="music" class="w-3.5 h-3.5 text-rosegold"></i>
+          <span>Tahoe Après &amp; Soirée Playlist</span>
+        </a>
+
+        <a href="https://www.airbnb.com/rooms/1533107665252646579?source_impression_id=p3_1793562693_P3m4186kMCIKa663"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 hover:bg-petal/50 border border-stone-200/80 text-xs uppercase tracking-[0.18em] text-espresso transition-colors shadow-sm">
+          <i data-lucide="home" class="w-3.5 h-3.5 text-champagne-bronze"></i>
+          <span>Cabin Listing</span>
+        </a>
+
+        <a href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
+          target="_blank" rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/90 hover:bg-petal/50 border border-stone-200/80 text-xs uppercase tracking-[0.18em] text-espresso transition-colors shadow-sm">
+          <i data-lucide="users" class="w-3.5 h-3.5 text-rosegold"></i>
+          <span>Airbnb Guest Group</span>
+        </a>
+      </div>
+
+      <!-- Cabin Contact Line -->
+      <div
+        class="pt-8 border-t border-stone-200/70 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-taupe">
+        <p class="tracking-wide">
+          <span class="uppercase tracking-[0.16em] font-medium text-espresso">Cabin Concierge Line:</span>
+          Reach David &amp; Linda directly via our shared Tahoe group thread or Airbnb co-traveler portal.
+        </p>
+        <p class="uppercase tracking-[0.2em] text-[10px] text-rosegold">
+          Lake Tahoe, CA • 16 Guests
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       VANILLA JAVASCRIPT: INTERACTIONS & AMBIANCE
+       ========================================== -->
+  <script>
+    // 1. Initialize Lucide Icons
+    lucide.createIcons();
+
+    // 2. Live Countdown Timer with Custom Date Persistence
+    (function initCountdown() {
+      const STORAGE_KEY = 'tahoe_engagement_target_date_v1';
+      // Default to Friday, January 15, 2027 at 4:00 PM PST
+      const DEFAULT_DATE_STR = '2027-01-15T16:00:00';
+
+      const daysEl = document.getElementById('cd-days');
+      const hoursEl = document.getElementById('cd-hours');
+      const minsEl = document.getElementById('cd-minutes');
+      const secsEl = document.getElementById('cd-seconds');
+      const labelEl = document.getElementById('target-date-label');
+      const pillDatesEl = document.getElementById('pill-dates-display');
+      const customizeBtn = document.getElementById('customize-date-btn');
+      const drawerEl = document.getElementById('date-picker-drawer');
+      const dateInput = document.getElementById('trip-date-input');
+      const saveDateBtn = document.getElementById('save-date-btn');
+
+      function getTargetDate() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          const parsed = new Date(saved);
+          if (!isNaN(parsed.getTime())) return parsed;
+        }
+        return new Date(DEFAULT_DATE_STR);
+      }
+
+      function formatWeekendRange(friDate) {
+        const sunDate = new Date(friDate.getTime() + 2 * 24 * 60 * 60 * 1000);
+        const monthShort = friDate.toLocaleDateString('en-US', { month: 'short' });
+        const friDay = friDate.getDate();
+        const sunDay = sunDate.getDate();
+        const year = friDate.getFullYear();
+        return `${monthShort} ${friDay}–${sunDay}, ${year}`;
+      }
+
+      function updateDisplay() {
+        const target = getTargetDate();
+        const now = new Date();
+        const diff = target.getTime() - now.getTime();
+
+        const formattedRange = formatWeekendRange(target);
+        labelEl.textContent = formattedRange;
+        pillDatesEl.textContent = formattedRange;
+
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minsEl.textContent = '00';
+          secsEl.textContent = '00';
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minsEl.textContent = String(minutes).padStart(2, '0');
+        secsEl.textContent = String(seconds).padStart(2, '0');
+      }
+
+      customizeBtn.addEventListener('click', () => {
+        drawerEl.classList.toggle('hidden');
+        const current = getTargetDate();
+        dateInput.value = current.toISOString().split('T')[0];
+      });
+
+      saveDateBtn.addEventListener('click', () => {
+        if (dateInput.value) {
+          const iso = `${dateInput.value}T16:00:00`;
+          localStorage.setItem(STORAGE_KEY, iso);
+          updateDisplay();
+          drawerEl.classList.add('hidden');
+        }
+      });
+
+      updateDisplay();
+      setInterval(updateDisplay, 1000);
+    })();
+
+    // 3. Ambient HTML5 Canvas: Delicate Floating Snow & Blush Rose Petals
+    (function initAmbientCanvas() {
+      const canvas = document.getElementById('ambient-canvas');
+      const ctx = canvas.getContext('2d');
+      const toggleBtn = document.getElementById('toggle-particles');
+      const statusText = document.getElementById('particle-status');
+
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
+      let active = true;
+      let animationFrameId = null;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const PARTICLE_COUNT = window.innerWidth < 640 ? 28 : 48;
+      const particles = [];
+
+      function createParticle() {
+        const isPetal = Math.random() < 0.28; // 72% soft snow, 28% blush rose petals
+        return {
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: isPetal ? Math.random() * 3.8 + 2.8 : Math.random() * 2.4 + 1.2,
+          speedY: Math.random() * 0.55 + 0.25,
+          speedX: (Math.random() - 0.5) * 0.4,
+          swayAmp: Math.random() * 0.6 + 0.2,
+          swaySpeed: Math.random() * 0.015 + 0.005,
+          angle: Math.random() * Math.PI * 2,
+          isPetal,
+          opacity: isPetal ? Math.random() * 0.35 + 0.25 : Math.random() * 0.5 + 0.3
+        };
+      }
+
+      for (let i = 0; i < PARTICLE_COUNT; i++) {
+        particles.push(createParticle());
+      }
+
+      function render() {
+        if (!active) return;
+        ctx.clearRect(0, 0, width, height);
+
+        for (const p of particles) {
+          p.angle += p.swaySpeed;
+          p.y += p.speedY;
+          p.x += p.speedX + Math.sin(p.angle) * p.swayAmp;
+
+          if (p.y > height + 12) {
+            p.y = -10;
+            p.x = Math.random() * width;
+          }
+          if (p.x > width + 12) p.x = -10;
+          if (p.x < -12) p.x = width + 10;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+
+          if (p.isPetal) {
+            // Soft blush petal ellipse
+            ctx.rotate(p.angle * 0.8);
+            ctx.fillStyle = `rgba(232, 196, 196, ${p.opacity})`;
+            ctx.beginPath();
+            ctx.ellipse(0, 0, p.radius * 1.35, p.radius * 0.78, 0, 0, Math.PI * 2);
+            ctx.fill();
+          } else {
+            // Luminous snow crystal orb
+            const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, p.radius * 1.4);
+            grad.addColorStop(0, `rgba(255, 255, 255, ${p.opacity + 0.2})`);
+            grad.addColorStop(0.6, `rgba(246, 229, 229, ${p.opacity})`);
+            grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(0, 0, p.radius * 1.4, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          ctx.restore();
+        }
+
+        animationFrameId = requestAnimationFrame(render);
+      }
+
+      render();
+
+      toggleBtn.addEventListener('click', () => {
+        active = !active;
+        statusText.textContent = active ? 'Snow: On' : 'Snow: Off';
+        if (active) {
+          render();
+        } else {
+          if (animationFrameId) cancelAnimationFrame(animationFrameId);
+          ctx.clearRect(0, 0, width, height);
+        }
+      });
+    })();
+
+    // 4. Scroll Reveal Observer
+    (function initScrollReveal() {
+      const revealEls = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      revealEls.forEach((el) => observer.observe(el));
+    })();
+
+    // 5. Guest Sync Form -> Copy Formatted Summary for Group Chat
+    (function initGuestSyncForm() {
+      const form = document.getElementById('guest-sync-form');
+      const banner = document.getElementById('sync-confirmation');
+      const bannerText = document.getElementById('sync-confirmation-text');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('guest-name').value.trim() || 'Guest';
+        const carpool = document.getElementById('carpool-status').value;
+        const slopeRadio = document.querySelector('input[name="slope_track"]:checked');
+        const slope = slopeRadio ? slopeRadio.value : 'Flexible';
+        const dietary = document.getElementById('dietary-notes').value.trim() || 'None';
+        const drinks = document.getElementById('drink-notes').value.trim() || 'Champagne & Wine!';
+        const sunday = document.getElementById('sunday-dinner').value;
+
+        const summary = [
+          `🥂 TAHOE ENGAGEMENT WEEKEND SYNC — ${name}`,
+          `• Transit & Carpool: ${carpool}`,
+          `• Saturday Track: ${slope}`,
+          `• Dietary Notes: ${dietary}`,
+          `• Celebratory Drinks: ${drinks}`,
+          `• Sunday Plan: ${sunday}`
+        ].join('\n');
+
+        try {
+          await navigator.clipboard.writeText(summary);
+          bannerText.textContent = `Copied ${name}’s weekend preferences! Paste directly into our group chat.`;
+        } catch (err) {
+          bannerText.textContent = `Preferences ready for ${name}! Share in our group chat.`;
+        }
+
+        banner.classList.remove('hidden');
+      });
+    })();
+  </script>
+</body>
+
+</html>
