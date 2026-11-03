@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,9 @@
   <!-- Google Fonts: Alex Brush (Calligraphy), Cormorant Garamond (Serif), Plus Jakarta Sans (Clean Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -82,6 +85,7 @@
     }
   </style>
 </head>
+
 <body class="font-sans text-slate-850 selection:bg-ice-200">
 
   <!-- Gentle Snowfall Background -->
@@ -90,14 +94,16 @@
   <!-- Minimal Top Nav -->
   <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-ice-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-      <a href="#top" class="font-serif font-semibold tracking-wider text-lg text-slate-850">
-        D &amp; L <span class="text-xs font-sans font-normal text-slate-500 ml-1.5">• Lake Tahoe</span>
+      <a href="#top"
+        class="font-script text-2xl sm:text-3xl text-slate-850 hover:text-ice-500 transition-colors leading-none pt-1">
+        David &amp; Linda
       </a>
       <nav class="flex items-center gap-4 sm:gap-6 text-xs uppercase tracking-[0.16em] text-slate-600 font-medium">
         <a href="#cabin" class="hover:text-slate-900 transition-colors">Cabin</a>
+        <a href="#party" class="hover:text-slate-900 transition-colors">Party</a>
         <a href="#schedule" class="hover:text-slate-900 transition-colors">Schedule</a>
-        <a href="#info" class="hover:text-slate-900 transition-colors hidden sm:inline">Info</a>
-        <a href="#rsvp" class="px-3.5 py-1.5 rounded-full bg-ice-500 text-white hover:bg-ice-400 transition-colors">RSVP</a>
+        <a href="#rsvp"
+          class="px-3.5 py-1.5 rounded-full bg-ice-500 text-white hover:bg-ice-400 transition-colors">RSVP</a>
       </nav>
     </div>
   </header>
@@ -107,28 +113,41 @@
     <!-- ==========================================
          1. HERO INVITATION CARD (Matches Winter Wonderland Card)
          ========================================== -->
-    <section class="invitation-card relative overflow-hidden rounded-3xl border border-ice-200 shadow-card px-6 py-12 sm:px-14 sm:py-16 text-center">
+    <section
+      class="invitation-card relative overflow-hidden rounded-3xl border border-ice-200 shadow-card px-6 py-12 sm:px-14 sm:py-16 text-center">
 
       <!-- Corner Snowflake Ornaments (SVG) -->
-      <svg class="absolute -top-6 -left-6 w-32 h-32 text-ice-300/60 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="50" y1="5" x2="50" y2="95"/><line x1="5" y1="50" x2="95" y2="50"/>
-        <line x1="18" y1="18" x2="82" y2="82"/><line x1="82" y1="18" x2="18" y2="82"/>
-        <polyline points="40,15 50,25 60,15"/><polyline points="40,85 50,75 60,85"/>
-        <polyline points="15,40 25,50 15,60"/><polyline points="85,40 75,50 85,60"/>
-        <circle cx="50" cy="50" r="8" fill="white"/>
+      <svg class="absolute -top-6 -left-6 w-32 h-32 text-ice-300/60 pointer-events-none" viewBox="0 0 100 100"
+        fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="50" y1="5" x2="50" y2="95" />
+        <line x1="5" y1="50" x2="95" y2="50" />
+        <line x1="18" y1="18" x2="82" y2="82" />
+        <line x1="82" y1="18" x2="18" y2="82" />
+        <polyline points="40,15 50,25 60,15" />
+        <polyline points="40,85 50,75 60,85" />
+        <polyline points="15,40 25,50 15,60" />
+        <polyline points="85,40 75,50 85,60" />
+        <circle cx="50" cy="50" r="8" fill="white" />
       </svg>
 
-      <svg class="absolute -top-4 -right-4 w-36 h-36 text-slate-400/35 pointer-events-none" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="50" y1="5" x2="50" y2="95"/><line x1="5" y1="50" x2="95" y2="50"/>
-        <line x1="18" y1="18" x2="82" y2="82"/><line x1="82" y1="18" x2="18" y2="82"/>
-        <polyline points="40,15 50,25 60,15"/><polyline points="40,85 50,75 60,85"/>
-        <polyline points="15,40 25,50 15,60"/><polyline points="85,40 75,50 85,60"/>
-        <circle cx="50" cy="50" r="10"/>
+      <svg class="absolute -top-4 -right-4 w-36 h-36 text-slate-400/35 pointer-events-none" viewBox="0 0 100 100"
+        fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="50" y1="5" x2="50" y2="95" />
+        <line x1="5" y1="50" x2="95" y2="50" />
+        <line x1="18" y1="18" x2="82" y2="82" />
+        <line x1="82" y1="18" x2="18" y2="82" />
+        <polyline points="40,15 50,25 60,15" />
+        <polyline points="40,85 50,75 60,85" />
+        <polyline points="15,40 25,50 15,60" />
+        <polyline points="85,40 75,50 85,60" />
+        <circle cx="50" cy="50" r="10" />
       </svg>
 
       <!-- Small Floating Accent Snowflakes -->
-      <i data-lucide="snowflake" class="hidden sm:block absolute top-1/3 left-10 w-6 h-6 text-ice-300/80 pointer-events-none"></i>
-      <i data-lucide="snowflake" class="hidden sm:block absolute top-1/2 right-10 w-5 h-5 text-ice-400/60 pointer-events-none"></i>
+      <i data-lucide="snowflake"
+        class="hidden sm:block absolute top-1/3 left-10 w-6 h-6 text-ice-300/80 pointer-events-none"></i>
+      <i data-lucide="snowflake"
+        class="hidden sm:block absolute top-1/2 right-10 w-5 h-5 text-ice-400/60 pointer-events-none"></i>
 
       <!-- Winter Wonderland Script Header -->
       <div class="relative z-10 max-w-xl mx-auto">
@@ -148,30 +167,43 @@
           David &amp; Linda
         </h1>
 
-        <!-- Cute Jellycat Bunny & Bear Proposal Keepsake Polaroid -->
-        <div class="my-6 flex flex-col items-center">
-          <div id="jellycat-polaroid" class="group relative bg-white p-2.5 pb-4 rounded-2xl shadow-md border border-ice-200 rotate-[-1.5deg] hover:rotate-0 hover:scale-[1.03] transition-all duration-300 cursor-pointer max-w-[230px] sm:max-w-[250px]">
-            <!-- Frosted Washi Tape Detail -->
-            <div class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-16 h-5 bg-ice-200/70 backdrop-blur-sm border border-white/60 rotate-[2deg] rounded-sm pointer-events-none"></div>
+        <!-- Proposal Keepsake Polaroid Pair -->
+        <div class="my-7 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-6">
+          <!-- Photo 1: David & Linda in the Mountains -->
+          <div
+            class="group relative bg-white p-2.5 pb-4 rounded-2xl shadow-md border border-ice-200 rotate-[-2deg] hover:rotate-0 hover:scale-[1.03] hover:z-20 transition-all duration-300 w-[220px] sm:w-[235px]">
+            <div
+              class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-16 h-5 bg-ice-200/70 backdrop-blur-sm border border-white/60 rotate-[-1deg] rounded-sm pointer-events-none">
+            </div>
             <div class="overflow-hidden rounded-xl border border-ice-100">
-              <img
-                src="jellycats.jpg"
-                alt="Jellycat Bunny in a bride dress and Bartholomew Bear in a tux from the proposal"
-                class="w-full h-52 sm:h-56 object-cover"
-              />
+              <img src="proposal-1.jpg" alt="David and Linda engaged in the mountains"
+                class="w-full h-60 sm:h-64 object-cover object-center" />
             </div>
             <p class="font-script text-2xl text-slate-750 mt-2.5 leading-none">
-              Proposal V.I.P.s 🐰🧸
+              She said yes!
             </p>
-            <p id="jellycat-caption" class="text-[10px] uppercase tracking-[0.16em] text-slate-400 mt-1">
-              Heading to Tahoe with us
+          </div>
+
+          <!-- Photo 2: Holding Jellycat Bunny & Bear by the Lake -->
+          <div
+            class="group relative bg-white p-2.5 pb-4 rounded-2xl shadow-md border border-ice-200 rotate-[2deg] hover:rotate-0 hover:scale-[1.03] hover:z-20 transition-all duration-300 w-[220px] sm:w-[235px]">
+            <div
+              class="absolute -top-2.5 left-1/2 -translate-x-1/2 w-16 h-5 bg-ice-200/70 backdrop-blur-sm border border-white/60 rotate-[2deg] rounded-sm pointer-events-none">
+            </div>
+            <div class="overflow-hidden rounded-xl border border-ice-100">
+              <img src="proposal-2.jpg" alt="Holding Jellycat Bunny and Bear at the proposal"
+                class="w-full h-60 sm:h-64 object-cover object-center" />
+            </div>
+            <p class="font-script text-2xl text-slate-750 mt-2.5 leading-none">
+              See you in Tahoe
             </p>
           </div>
         </div>
 
         <!-- Classic Invitation Date Lockup -->
         <div class="my-8 flex items-center justify-center gap-4 sm:gap-8">
-          <div class="w-24 sm:w-28 border-y border-slate-400/60 py-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-700 font-serif font-semibold">
+          <div
+            class="w-24 sm:w-28 border-y border-slate-400/60 py-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-700 font-serif font-semibold">
             Fri – Sun
           </div>
 
@@ -181,18 +213,15 @@
             <span class="block text-xs tracking-[0.25em] text-slate-500 font-serif">2027</span>
           </div>
 
-          <div class="w-24 sm:w-28 border-y border-slate-400/60 py-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-700 font-serif font-semibold">
+          <div
+            class="w-24 sm:w-28 border-y border-slate-400/60 py-2 text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-700 font-serif font-semibold">
             Lake Tahoe
           </div>
         </div>
 
-        <!-- Quick Facts -->
-        <p class="text-xs sm:text-sm uppercase tracking-[0.18em] text-slate-600 mb-2">
-          16 Guests • Ski Trip Fri &amp; Sun • Engagement Party Saturday Night
-        </p>
-
         <!-- Simple Countdown Pill -->
-        <div class="inline-flex items-center gap-4 px-5 py-2.5 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600 mt-3 mb-7">
+        <div
+          class="inline-flex items-center gap-4 px-5 py-2.5 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600 mt-3 mb-7">
           <span class="uppercase tracking-[0.16em] text-slate-500 font-medium">Countdown:</span>
           <span class="font-serif text-base font-semibold text-slate-850">
             <span id="cd-days">--</span>d :
@@ -203,10 +232,12 @@
 
         <!-- Primary Action Buttons -->
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <a href="#rsvp" class="px-7 py-3 rounded-full bg-slate-850 text-white text-xs uppercase tracking-[0.2em] font-medium hover:bg-slate-700 transition-all">
+          <a href="#rsvp"
+            class="px-7 py-3 rounded-full bg-slate-850 text-white text-xs uppercase tracking-[0.2em] font-medium hover:bg-slate-700 transition-all">
             RSVP Now
           </a>
-          <a href="#schedule" class="px-7 py-3 rounded-full bg-white border border-ice-300 text-slate-750 text-xs uppercase tracking-[0.2em] font-medium hover:bg-ice-50 transition-all">
+          <a href="#schedule"
+            class="px-7 py-3 rounded-full bg-white border border-ice-300 text-slate-750 text-xs uppercase tracking-[0.2em] font-medium hover:bg-ice-50 transition-all">
             View Schedule
           </a>
         </div>
@@ -216,22 +247,22 @@
       <div class="mt-10 -mx-6 sm:-mx-14 -mb-12 sm:-mb-16 pt-4 pointer-events-none select-none opacity-80">
         <svg viewBox="0 0 800 90" class="w-full h-16 sm:h-24" preserveAspectRatio="none">
           <!-- Soft Snow Hills -->
-          <path d="M0 90 L0 55 Q180 30 380 65 T800 50 L800 90 Z" fill="#D8E8F2"/>
-          <path d="M0 90 L0 68 Q260 45 520 70 T800 62 L800 90 Z" fill="#B5D3E7" opacity="0.65"/>
+          <path d="M0 90 L0 55 Q180 30 380 65 T800 50 L800 90 Z" fill="#D8E8F2" />
+          <path d="M0 90 L0 68 Q260 45 520 70 T800 62 L800 90 Z" fill="#B5D3E7" opacity="0.65" />
           <!-- Left Pine Cluster -->
           <g fill="#84B4D4" opacity="0.85">
-            <polygon points="35,15 15,65 55,65"/>
-            <polygon points="35,5 20,45 50,45"/>
-            <polygon points="75,25 58,70 92,70"/>
-            <polygon points="110,35 96,72 124,72"/>
-            <polygon points="145,28 128,72 162,72"/>
+            <polygon points="35,15 15,65 55,65" />
+            <polygon points="35,5 20,45 50,45" />
+            <polygon points="75,25 58,70 92,70" />
+            <polygon points="110,35 96,72 124,72" />
+            <polygon points="145,28 128,72 162,72" />
           </g>
           <!-- Right Pine Cluster -->
           <g fill="#84B4D4" opacity="0.85">
-            <polygon points="665,30 648,72 682,72"/>
-            <polygon points="700,35 685,72 715,72"/>
-            <polygon points="735,20 715,70 755,70"/>
-            <polygon points="770,12 748,68 792,68"/>
+            <polygon points="665,30 648,72 682,72" />
+            <polygon points="700,35 685,72 715,72" />
+            <polygon points="735,20 715,70 755,70" />
+            <polygon points="770,12 748,68 792,68" />
           </g>
         </svg>
       </div>
@@ -246,49 +277,127 @@
           <span class="text-[11px] uppercase tracking-[0.22em] text-ice-500 font-semibold">The Lodging</span>
           <h2 class="font-serif text-3xl sm:text-4xl text-slate-850 font-semibold mt-0.5">Our Tahoe Cabin</h2>
         </div>
-        <p class="text-sm text-slate-600">
-          16-person cabin • Hot tub • Decks • Large kitchen &amp; hangout space
-        </p>
+        <div class="flex flex-wrap items-center sm:justify-end gap-2">
+          <span class="px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600">16-Person
+            Cabin</span>
+          <span class="px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600">Hot Tub</span>
+          <span class="px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600">Game Room</span>
+          <span class="px-3 py-1 rounded-full bg-white border border-ice-300 text-xs font-semibold text-slate-850">$250
+            / person for lodging</span>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
         <!-- Link 1: Tour the Cabin -->
-        <a
-          href="https://www.airbnb.com/rooms/1533107665252646579?source_impression_id=p3_1793562693_P3m4186kMCIKa663"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group p-5 rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex items-center justify-between transition-all"
-        >
+        <a href="https://www.airbnb.com/rooms/1533107665252646579?source_impression_id=p3_1793562693_P3m4186kMCIKa663"
+          target="_blank" rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex items-center justify-between transition-all">
           <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500">
+            <div
+              class="w-10 h-10 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
               <i data-lucide="home" class="w-5 h-5"></i>
             </div>
             <div>
               <h3 class="font-serif text-xl font-semibold text-slate-850">Tour the Cabin</h3>
-              <p class="text-xs text-slate-500">View photos &amp; listing on Airbnb</p>
+              <p class="text-xs text-slate-500">View photos on Airbnb</p>
             </div>
           </div>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-slate-850 transition-colors"></i>
+          <i data-lucide="external-link"
+            class="w-4 h-4 text-slate-400 group-hover:text-slate-850 transition-colors shrink-0"></i>
         </a>
 
         <!-- Link 2: Join Co-Travelers -->
-        <a
-          href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="group p-5 rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex items-center justify-between transition-all"
-        >
+        <a href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
+          target="_blank" rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex items-center justify-between transition-all">
           <div class="flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500">
+            <div
+              class="w-10 h-10 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
               <i data-lucide="users" class="w-5 h-5"></i>
             </div>
             <div>
-              <h3 class="font-serif text-xl font-semibold text-slate-850">Join Airbnb Trip Group</h3>
-              <p class="text-xs text-slate-500">Get address, check-in info &amp; door code</p>
+              <h3 class="font-serif text-xl font-semibold text-slate-850">Airbnb Trip</h3>
+              <p class="text-xs text-slate-500">Address &amp; check-in info</p>
             </div>
           </div>
-          <i data-lucide="external-link" class="w-4 h-4 text-slate-400 group-hover:text-slate-850 transition-colors"></i>
+          <i data-lucide="external-link"
+            class="w-4 h-4 text-slate-400 group-hover:text-slate-850 transition-colors shrink-0"></i>
         </a>
+
+        <!-- Link 3: Palisades Tahoe -->
+        <a href="https://www.palisadestahoe.com/" target="_blank" rel="noopener noreferrer"
+          class="group p-5 rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex items-center justify-between transition-all">
+          <div class="flex items-center gap-3.5">
+            <div
+              class="w-10 h-10 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
+              <i data-lucide="mountain-snow" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-semibold text-slate-850">Palisades Tahoe</h3>
+              <p class="text-xs text-slate-500">Our ski mountain &amp; lifts</p>
+            </div>
+          </div>
+          <i data-lucide="external-link"
+            class="w-4 h-4 text-slate-400 group-hover:text-slate-850 transition-colors shrink-0"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         2.5 THE ENGAGEMENT PARTY (Dedicated Spotlight)
+         ========================================== -->
+    <section id="party"
+      class="glass-panel rounded-3xl border-2 border-ice-300 shadow-card p-6 sm:p-10 relative overflow-hidden">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-ice-200/80">
+        <div>
+          <span class="text-[11px] uppercase tracking-[0.22em] text-ice-500 font-semibold">Saturday Night • Jan
+            23</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-slate-850 font-semibold mt-0.5">The Engagement Party</h2>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-3.5 py-1 rounded-full bg-ice-500 text-white text-xs font-medium">At the Cabin</span>
+          <span
+            class="px-3.5 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-700 font-medium">Dinner
+            &amp; Drinks on Us</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+        <!-- Photos -->
+        <div class="p-5 rounded-2xl bg-ice-50/70 border border-ice-200">
+          <div
+            class="w-9 h-9 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 mb-3">
+            <i data-lucide="camera" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-slate-850 mb-1">Group &amp; Couple Photos</h3>
+          <p class="text-sm text-slate-600">
+            We'll be taking photos together before dinner, so come dressed up!
+          </p>
+        </div>
+
+        <!-- Dinner & Drinks -->
+        <div class="p-5 rounded-2xl bg-ice-50/70 border border-ice-200">
+          <div
+            class="w-9 h-9 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 mb-3">
+            <i data-lucide="wine" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-slate-850 mb-1">Dinner &amp; Drinks</h3>
+          <p class="text-sm text-slate-600">
+            Dinner, drinks, and champagne at the cabin are all on us!
+          </p>
+        </div>
+
+        <!-- Games & Hot Tub Night -->
+        <div class="p-5 rounded-2xl bg-ice-50/70 border border-ice-200">
+          <div
+            class="w-9 h-9 rounded-xl bg-white border border-ice-200 flex items-center justify-center text-ice-500 mb-3">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-slate-850 mb-1">Games &amp; Hot Tub</h3>
+          <p class="text-sm text-slate-600">
+            Hanging out after dinner with games and hot tubbing!
+          </p>
+        </div>
       </div>
     </section>
 
@@ -299,9 +408,6 @@
       <div class="mb-6">
         <span class="text-[11px] uppercase tracking-[0.22em] text-ice-500 font-semibold">The Plan</span>
         <h2 class="font-serif text-3xl sm:text-4xl text-slate-850 font-semibold mt-0.5">Weekend Schedule</h2>
-        <p class="text-sm text-slate-600 mt-1">
-          Friday and Sunday are a regular ski trip. Saturday night is the engagement party.
-        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -310,9 +416,10 @@
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs uppercase tracking-[0.18em] font-semibold text-slate-500">Fri • Jan 22</span>
-              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600">Ski Trip Arrival</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600">Ski
+                Trip Arrival</span>
             </div>
-            <h3 class="font-serif text-2xl font-semibold text-slate-850 mb-3">Late Check-In</h3>
+            <h3 class="font-serif text-2xl font-semibold text-slate-850 mb-3">Check-In</h3>
             <ul class="space-y-2.5 text-sm text-slate-600">
               <li class="flex items-start gap-2">
                 <i data-lucide="moon" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
@@ -320,7 +427,7 @@
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="package" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                <span>Unpack, drop ski gear, casual hangout &amp; rest up for Saturday.</span>
+                <span>Unpack, casual hangout &amp; rest up for Saturday.</span>
               </li>
             </ul>
           </div>
@@ -337,11 +444,15 @@
             <ul class="space-y-2.5 text-sm text-slate-700">
               <li class="flex items-start gap-2">
                 <i data-lucide="mountain-snow" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Daytime:</strong> Ski / snowboard at the resorts, or relax at the cabin &amp; hot tub.</span>
+                <span><strong>Daytime:</strong> Ski / snowboard at <a href="https://www.palisadestahoe.com/"
+                    target="_blank" rel="noopener noreferrer"
+                    class="underline decoration-ice-400 hover:text-ice-500 font-medium">Palisades Tahoe</a>, or relax at
+                  the cabin &amp; hot tub.</span>
               </li>
               <li class="flex items-start gap-2">
-                <i data-lucide="sparkles" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Evening:</strong> <strong>The Engagement Party</strong> at the cabin — dinner, drinks, and celebrating together.</span>
+                <i data-lucide="camera" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                <span><strong>Evening:</strong> Engagement party — photos,
+                  dinner, drinks, and celebrating.</span>
               </li>
             </ul>
           </div>
@@ -352,13 +463,14 @@
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="text-xs uppercase tracking-[0.18em] font-semibold text-slate-500">Sun • Jan 24</span>
-              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600">Ski &amp; Head Home</span>
+              <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600">Head
+                Home</span>
             </div>
             <h3 class="font-serif text-2xl font-semibold text-slate-850 mb-3">Checkout &amp; Drive Back</h3>
             <ul class="space-y-2.5 text-sm text-slate-600">
               <li class="flex items-start gap-2">
                 <i data-lucide="coffee" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Morning:</strong> Coffee, pack up, cabin checkout &amp; group photo.</span>
+                <span><strong>Morning:</strong> Coffee, pack up, cabin checkout.</span>
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="snowflake" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
@@ -366,7 +478,7 @@
               </li>
               <li class="flex items-start gap-2">
                 <i data-lucide="utensils" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Evening:</strong> Group dinner in Sacramento on the drive back (place TBD).</span>
+                <span><strong>Evening:</strong> Group dinner in Sacramento on the way back.</span>
               </li>
             </ul>
           </div>
@@ -375,103 +487,78 @@
     </section>
 
     <!-- ==========================================
-         4. WHAT TO PACK & WINTER DRIVING
-         ========================================== -->
-    <section id="info" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- What to Wear -->
-      <div class="glass-panel rounded-3xl border border-ice-200 shadow-card p-6 sm:p-8">
-        <div class="flex items-center gap-2.5 mb-4">
-          <i data-lucide="shirt" class="w-5 h-5 text-ice-500"></i>
-          <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-850">What to Pack</h2>
-        </div>
-        <ul class="space-y-3 text-sm text-slate-600">
-          <li class="p-3.5 rounded-xl bg-ice-50/80 border border-ice-200/80">
-            <strong class="text-slate-850 block">Saturday Night (Engagement Party):</strong>
-            Nice dinner attire — winter whites, blues, neutrals, or smart casual/cocktail.
-          </li>
-          <li class="p-3.5 rounded-xl bg-ice-50/80 border border-ice-200/80">
-            <strong class="text-slate-850 block">Rest of the Weekend:</strong>
-            Normal ski/snow gear, warm layers, loungewear, and a swimsuit for the hot tub.
-          </li>
-        </ul>
-      </div>
-
-      <!-- Winter Driving Notice -->
-      <div class="glass-panel rounded-3xl border border-ice-200 shadow-card p-6 sm:p-8 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center gap-2.5 mb-4">
-            <i data-lucide="car-front" class="w-5 h-5 text-ice-500"></i>
-            <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-slate-850">Winter Driving</h2>
-          </div>
-          <p class="text-sm text-slate-600 leading-relaxed mb-4">
-            I-80 (Donner Pass) and US-50 (Echo Summit) require <strong>AWD/4WD with snow tires</strong> or <strong>tire chains</strong> in the trunk during winter storms.
-          </p>
-        </div>
-        <a
-          href="https://quickmap.dot.ca.gov/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center justify-between px-5 py-3.5 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.18em] font-medium transition-colors"
-        >
-          <span>Check Caltrans QuickMap</span>
-          <i data-lucide="external-link" class="w-4 h-4 text-ice-300"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- ==========================================
          5. SIMPLE YES / NO RSVP
          ========================================== -->
-    <section id="rsvp" class="glass-panel rounded-3xl border border-ice-200 shadow-card p-6 sm:p-10 max-w-xl mx-auto text-center">
+    <section id="rsvp"
+      class="glass-panel rounded-3xl border border-ice-200 shadow-card p-6 sm:p-10 max-w-xl mx-auto text-center">
       <span class="text-[11px] uppercase tracking-[0.22em] text-ice-500 font-semibold">RSVP</span>
-      <h2 class="font-serif text-3xl sm:text-4xl text-slate-850 font-semibold mt-1 mb-2">Are You Joining Us?</h2>
-      <p class="text-sm text-slate-600 mb-6">
-         Fri, Jan 22 – Sun, Jan 24 • Lake Tahoe
-      </p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-slate-850 font-semibold mt-1 mb-3">Are You Joining Us?</h2>
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+        <span class="px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-slate-600">Fri, Jan 22 – Sun,
+          Jan 24</span>
+        <span class="px-3 py-1 rounded-full bg-white border border-ice-300 text-xs font-semibold text-slate-850">$250 /
+          person for lodging</span>
+        <span class="px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs text-ice-500 font-medium">Sat Dinner
+          &amp; Drinks on Us</span>
+      </div>
 
-      <form id="rsvp-form" class="space-y-4 text-left">
+      <!-- Hidden iframe so Google Forms submits natively (even from file:// or with strict cookie settings) -->
+      <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" class="hidden" title="RSVP submission target"></iframe>
+
+      <form
+        id="rsvp-form"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf1gKiAZarczTK4Sg8ulqNTs2bgUvZrOUFcSdsxqP-f7k0CsA/formResponse"
+        method="POST"
+        target="hidden_rsvp_iframe"
+        class="space-y-4 text-left"
+      >
         <div>
           <label for="guest-name" class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
             Your Name
           </label>
-          <input
-            type="text"
-            id="guest-name"
-            required
-            placeholder="Enter your name"
-            class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500"
-          />
+          <input type="text" id="guest-name" name="entry.1498135098" required placeholder="Enter your name"
+            class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
+        </div>
+
+        <div>
+          <label for="guest-email" class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
+            Your Email
+          </label>
+          <input type="email" id="guest-email" name="emailAddress" required placeholder="Enter your email for confirmation"
+            class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
         </div>
 
         <!-- Simple Yes / No Selection -->
         <div>
           <span class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
-            Attending?
+            Can you attend?
           </span>
           <div class="grid grid-cols-2 gap-3">
             <label class="cursor-pointer">
-              <input type="radio" name="attending" value="Yes" class="peer sr-only" checked />
-              <div class="py-3.5 px-4 rounded-xl bg-white border border-ice-200 text-center text-sm font-semibold text-slate-600 peer-checked:bg-ice-500 peer-checked:text-white peer-checked:border-ice-500 transition-all">
-                Yes, I’m In!
+              <input type="radio" name="entry.877086558" value="Yes, I'll be there!" class="peer sr-only" checked />
+              <div
+                class="py-3.5 px-4 rounded-xl bg-white border border-ice-200 text-center text-sm font-semibold text-slate-600 peer-checked:bg-ice-500 peer-checked:text-white peer-checked:border-ice-500 transition-all">
+                Yes, I'll be there!
               </div>
             </label>
 
             <label class="cursor-pointer">
-              <input type="radio" name="attending" value="No" class="peer sr-only" />
-              <div class="py-3.5 px-4 rounded-xl bg-white border border-ice-200 text-center text-sm font-semibold text-slate-600 peer-checked:bg-slate-850 peer-checked:text-white peer-checked:border-slate-850 transition-all">
-                No, Can’t Make It
+              <input type="radio" name="entry.877086558" value="Sorry, can't make it" class="peer sr-only" />
+              <div
+                class="py-3.5 px-4 rounded-xl bg-white border border-ice-200 text-center text-sm font-semibold text-slate-600 peer-checked:bg-slate-850 peer-checked:text-white peer-checked:border-slate-850 transition-all">
+                Sorry, can't make it
               </div>
             </label>
           </div>
         </div>
 
         <!-- Feedback Message -->
-        <div id="rsvp-toast" class="hidden p-3.5 rounded-xl bg-ice-100 border border-ice-300 text-xs text-slate-850 text-center font-medium"></div>
+        <div id="rsvp-toast"
+          class="hidden p-3.5 rounded-xl bg-ice-100 border border-ice-300 text-xs text-slate-850 text-center font-medium">
+        </div>
 
-        <button
-          type="submit"
-          class="w-full py-3.5 px-6 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all"
-        >
+        <button type="submit" id="rsvp-submit-btn"
+          class="w-full py-3.5 px-6 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all disabled:opacity-60">
           Confirm RSVP
         </button>
       </form>
@@ -481,14 +568,6 @@
 
   <!-- Minimal Footer -->
   <footer class="relative z-20 border-t border-ice-200/80 py-8 px-4 text-center text-xs text-slate-500">
-    <!-- Mini Cute Illustrated Bunny & Bear Doodle -->
-    <div class="inline-flex items-center justify-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-ice-200 text-[11px] text-slate-600 mb-3 shadow-sm">
-      <span>🐰 Bride Bunny</span>
-      <span class="text-ice-400">•</span>
-      <span>🧸 Groom Bear</span>
-      <span class="text-ice-400">•</span>
-      <span>Tahoe Mascots</span>
-    </div>
     <p class="font-script text-3xl text-slate-750 mb-1">David &amp; Linda</p>
     <p>January 22–24, 2027 • Lake Tahoe, CA</p>
   </footer>
@@ -523,47 +602,33 @@
       setInterval(tick, 30000);
     })();
 
-    // 2. Simple Yes / No RSVP Handler
+    // 2. Simple Yes / No RSVP Handler (Submits natively via hidden iframe to Google Forms)
     (function initRsvp() {
       const form = document.getElementById('rsvp-form');
+      const iframe = document.getElementById('hidden_rsvp_iframe');
       const toast = document.getElementById('rsvp-toast');
+      const submitBtn = document.getElementById('rsvp-submit-btn');
+      let submitted = false;
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+      form.addEventListener('submit', () => {
+        submitted = true;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+      });
+
+      iframe.addEventListener('load', () => {
+        if (!submitted) return;
         const name = document.getElementById('guest-name').value.trim();
-        const status = document.querySelector('input[name="attending"]:checked').value;
-        const msg = `Tahoe Trip RSVP (Jan 22–24) — ${name}: ${status}`;
+        const selected = document.querySelector('input[name="entry.877086558"]:checked');
+        const status = selected ? selected.value : '';
 
-        try {
-          await navigator.clipboard.writeText(msg);
-          toast.textContent = `Got it (${status})! Copied "${msg}" to paste in the group chat.`;
-        } catch (_) {
-          toast.textContent = `Got it (${status})! Let us know in the group chat.`;
-        }
+        toast.textContent = `Thanks, ${name}! Your RSVP (${status}) has been recorded.`;
         toast.classList.remove('hidden');
+        submitBtn.textContent = 'RSVP Submitted ✓';
       });
     })();
 
-    // 2.5 Cute Polaroid Tap Easter Egg
-    (function initPolaroidBounce() {
-      const card = document.getElementById('jellycat-polaroid');
-      const caption = document.getElementById('jellycat-caption');
-      const notes = [
-        'Heading to Tahoe with us',
-        'Bride Bunny & Groom Bear',
-        'See you on the slopes! 🎿',
-        'Ready for Saturday night 🥂'
-      ];
-      let idx = 0;
-      if (card && caption) {
-        card.addEventListener('click', () => {
-          idx = (idx + 1) % notes.length;
-          caption.textContent = notes[idx];
-        });
-      }
-    })();
-
-    // 3. Subtle Winter Snowflakes Canvas
+    // 3. Winter Snowstorm Canvas (Detailed 6-Branch Crystal Snowflakes)
     (function initSnow() {
       const canvas = document.getElementById('snow-canvas');
       const ctx = canvas.getContext('2d');
@@ -575,29 +640,66 @@
         h = canvas.height = window.innerHeight;
       });
 
-      const count = w < 640 ? 22 : 38;
+      const count = w < 640 ? 32 : 58;
       const flakes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        r: Math.random() * 2.5 + 1,
-        vy: Math.random() * 0.45 + 0.2,
-        vx: (Math.random() - 0.5) * 0.3,
-        alpha: Math.random() * 0.5 + 0.3
+        size: Math.random() * 5 + 4,
+        vy: Math.random() * 0.7 + 0.35,
+        vx: (Math.random() - 0.5) * 0.35,
+        swayAmp: Math.random() * 0.35 + 0.15,
+        swaySpeed: Math.random() * 0.015 + 0.006,
+        swayAngle: Math.random() * Math.PI * 2,
+        rot: Math.random() * Math.PI * 2,
+        rotSpeed: (Math.random() - 0.5) * 0.008,
+        alpha: Math.random() * 0.35 + 0.35
       }));
+
+      function drawSnowflake(x, y, radius, rotation, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.strokeStyle = `rgba(110, 165, 205, ${alpha})`;
+        ctx.lineWidth = radius > 7 ? 1.35 : 1.05;
+        ctx.lineCap = 'round';
+
+        const branchLen = radius * 0.55;
+        const tipDist = radius * 0.38;
+
+        ctx.beginPath();
+        for (let i = 0; i < 6; i++) {
+          // Main crystal arm
+          ctx.moveTo(0, 0);
+          ctx.lineTo(0, -radius);
+
+          // Side crystal chevrons on each arm
+          ctx.moveTo(0, - branchLen);
+          ctx.lineTo(-tipDist * 0.7, -branchLen - tipDist * 0.65);
+          ctx.moveTo(0, -branchLen);
+          ctx.lineTo(tipDist * 0.7, -branchLen - tipDist * 0.65);
+
+          ctx.rotate(Math.PI / 3);
+        }
+        ctx.stroke();
+        ctx.restore();
+      }
 
       function draw() {
         ctx.clearRect(0, 0, w, h);
         for (const f of flakes) {
+          f.swayAngle += f.swaySpeed;
+          f.rot += f.rotSpeed;
           f.y += f.vy;
-          f.x += f.vx;
-          if (f.y > h) { f.y = -5; f.x = Math.random() * w; }
-          if (f.x > w) f.x = 0;
-          if (f.x < 0) f.x = w;
+          f.x += f.vx + Math.sin(f.swayAngle) * f.swayAmp;
 
-          ctx.beginPath();
-          ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(132, 180, 212, ${f.alpha})`;
-          ctx.fill();
+          if (f.y > h + 15) {
+            f.y = -15;
+            f.x = Math.random() * w;
+          }
+          if (f.x > w + 15) f.x = -15;
+          if (f.x < -15) f.x = w + 15;
+
+          drawSnowflake(f.x, f.y, f.size, f.rot, f.alpha);
         }
         requestAnimationFrame(draw);
       }
@@ -605,4 +707,5 @@
     })();
   </script>
 </body>
+
 </html>
