@@ -91,6 +91,39 @@
   <!-- Gentle Snowfall Background -->
   <canvas id="snow-canvas" aria-hidden="true"></canvas>
 
+  <!-- Password Protection Gate Modal -->
+  <div id="password-gate" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md">
+    <div class="invitation-card relative overflow-hidden w-full max-w-sm rounded-3xl border border-ice-200 shadow-2xl p-8 text-center">
+      <!-- Decorative Snowflake -->
+      <div class="w-12 h-12 rounded-2xl bg-ice-100 border border-ice-200 flex items-center justify-center mx-auto mb-4 text-ice-500">
+        <i data-lucide="lock" class="w-5 h-5"></i>
+      </div>
+
+      <p class="font-script text-4xl text-slate-850 leading-none mb-1">David &amp; Linda</p>
+      <p class="font-serif text-xs uppercase tracking-[0.24em] text-slate-500 mb-6">Tahoe Ski Trip &amp; Engagement</p>
+
+      <form id="password-form" class="space-y-3">
+        <div class="relative">
+          <input
+            type="password"
+            id="site-password-input"
+            required
+            placeholder="Enter password"
+            class="w-full px-4 py-3 text-center rounded-xl bg-white/90 border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500"
+          />
+        </div>
+        <p id="password-error" class="hidden text-xs text-rose-500 font-medium">Incorrect password. Please try again.</p>
+        <button
+          type="submit"
+          class="w-full py-3 px-6 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all shadow-sm"
+        >
+          Enter Site
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="site-content" class="filter blur-sm pointer-events-none transition-all duration-700">
   <!-- Minimal Top Nav -->
   <header class="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-ice-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
@@ -502,8 +535,28 @@
           &amp; Drinks on Us</span>
       </div>
 
-      <!-- Hidden iframe so Google Forms submits natively (even from file:// or with strict cookie settings) -->
+      <!-- Hidden iframe so Google Forms submits natively -->
       <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" class="hidden" title="RSVP submission target"></iframe>
+
+      <!-- Status Card for Returning Visitors who already submitted -->
+      <div id="rsvp-saved-card" class="hidden text-left p-6 rounded-2xl bg-white border border-ice-200 shadow-sm mb-4">
+        <div class="flex items-center justify-between mb-3 pb-3 border-b border-ice-100">
+          <span class="text-xs uppercase tracking-[0.16em] text-ice-500 font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-ice-500"></i>
+            RSVP Confirmed
+          </span>
+          <button type="button" id="rsvp-edit-btn" class="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4 flex items-center gap-1">
+            <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+            Change Response
+          </button>
+        </div>
+        <p class="text-base text-slate-850 font-medium">
+          <span id="saved-guest-name"></span>
+        </p>
+        <p class="text-sm text-slate-600 mt-1">
+          Status: <strong id="saved-guest-status" class="text-slate-850"></strong>
+        </p>
+      </div>
 
       <form
         id="rsvp-form"
@@ -517,14 +570,6 @@
             Your Name
           </label>
           <input type="text" id="guest-name" name="entry.1498135098" required placeholder="Enter your name"
-            class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
-        </div>
-
-        <div>
-          <label for="guest-email" class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
-            Your Email
-          </label>
-          <input type="email" id="guest-email" name="emailAddress" required placeholder="Enter your email for confirmation"
             class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
         </div>
 
@@ -571,12 +616,50 @@
     <p class="font-script text-3xl text-slate-750 mb-1">David &amp; Linda</p>
     <p>January 22–24, 2027 • Lake Tahoe, CA</p>
   </footer>
+  </div><!-- /#site-content -->
 
   <!-- ==========================================
        JAVASCRIPT: SNOW & COUNTDOWN & SIMPLE RSVP
        ========================================== -->
   <script>
     lucide.createIcons();
+
+    // 0. Password Protection Gate
+    (function initPasswordGate() {
+      const SITE_PASSWORD = 'tahoe'; // <-- Change this password to whatever you like!
+      const PASS_STORAGE_KEY = 'tahoe_site_authenticated_v1';
+
+      const gate = document.getElementById('password-gate');
+      const content = document.getElementById('site-content');
+      const form = document.getElementById('password-form');
+      const input = document.getElementById('site-password-input');
+      const errorMsg = document.getElementById('password-error');
+
+      function unlockSite() {
+        gate.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => gate.classList.add('hidden'), 400);
+        content.classList.remove('filter', 'blur-sm', 'pointer-events-none');
+      }
+
+      // Check if already authenticated in this browser
+      if (sessionStorage.getItem(PASS_STORAGE_KEY) === 'true' || localStorage.getItem(PASS_STORAGE_KEY) === 'true') {
+        unlockSite();
+      }
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const entered = input.value.trim().toLowerCase();
+        if (entered === SITE_PASSWORD.toLowerCase()) {
+          sessionStorage.setItem(PASS_STORAGE_KEY, 'true');
+          localStorage.setItem(PASS_STORAGE_KEY, 'true');
+          unlockSite();
+        } else {
+          errorMsg.classList.remove('hidden');
+          input.classList.add('border-rose-400');
+          input.focus();
+        }
+      });
+    })();
 
     // 1. Countdown to Friday, Jan 22, 2027 at 5:00 PM
     (function initCountdown() {
@@ -602,13 +685,50 @@
       setInterval(tick, 30000);
     })();
 
-    // 2. Simple Yes / No RSVP Handler (Submits natively via hidden iframe to Google Forms)
+    // 2. Simple Yes / No RSVP Handler (Submits natively via hidden iframe & saves to localStorage)
     (function initRsvp() {
       const form = document.getElementById('rsvp-form');
       const iframe = document.getElementById('hidden_rsvp_iframe');
       const toast = document.getElementById('rsvp-toast');
       const submitBtn = document.getElementById('rsvp-submit-btn');
+      const savedCard = document.getElementById('rsvp-saved-card');
+      const savedName = document.getElementById('saved-guest-name');
+      const savedStatus = document.getElementById('saved-guest-status');
+      const editBtn = document.getElementById('rsvp-edit-btn');
+      const nameInput = document.getElementById('guest-name');
+
+      const STORAGE_KEY = 'tahoe_rsvp_response_v1';
       let submitted = false;
+
+      // Check if user already submitted previously
+      function loadSavedResponse() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          try {
+            const data = JSON.parse(saved);
+            savedName.textContent = data.name;
+            savedStatus.textContent = data.status;
+            savedCard.classList.remove('hidden');
+            form.classList.add('hidden');
+            
+            // Pre-fill the form in case they click edit
+            nameInput.value = data.name;
+            const radio = document.querySelector(`input[name="entry.877086558"][value="${data.status}"]`);
+            if (radio) radio.checked = true;
+          } catch (e) {}
+        }
+      }
+
+      loadSavedResponse();
+
+      // "Change Response" button reveals form again
+      editBtn.addEventListener('click', () => {
+        savedCard.classList.add('hidden');
+        form.classList.remove('hidden');
+        toast.classList.add('hidden');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Update RSVP';
+      });
 
       form.addEventListener('submit', () => {
         submitted = true;
@@ -618,13 +738,22 @@
 
       iframe.addEventListener('load', () => {
         if (!submitted) return;
-        const name = document.getElementById('guest-name').value.trim();
+        const name = nameInput.value.trim();
         const selected = document.querySelector('input[name="entry.877086558"]:checked');
         const status = selected ? selected.value : '';
+
+        // Save response to localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ name, status, time: Date.now() }));
 
         toast.textContent = `Thanks, ${name}! Your RSVP (${status}) has been recorded.`;
         toast.classList.remove('hidden');
         submitBtn.textContent = 'RSVP Submitted ✓';
+
+        // Show the saved card after brief moment
+        setTimeout(() => {
+          loadSavedResponse();
+          if (window.lucide) lucide.createIcons();
+        }, 1200);
       });
     })();
 
