@@ -143,6 +143,7 @@
           <a href="#cabin" class="hover:text-slate-900 transition-colors">Cabin</a>
           <a href="#party" class="hover:text-slate-900 transition-colors">Party</a>
           <a href="#schedule" class="hover:text-slate-900 transition-colors">Schedule</a>
+          <a href="#logistics" class="hover:text-slate-900 transition-colors">Logistics</a>
           <a href="#rsvp"
             class="px-3.5 py-1.5 rounded-full bg-ice-500 text-white hover:bg-ice-400 transition-colors">RSVP</a>
         </nav>
@@ -172,6 +173,9 @@
         <a href="#schedule"
           class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-ice-50">Weekend
           Schedule</a>
+        <a href="#logistics"
+          class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-ice-50">Trip
+          Logistics</a>
         <a href="#rsvp"
           class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-ice-500 hover:bg-ice-50">RSVP
           Form</a>
@@ -574,7 +578,77 @@
       </section>
 
       <!-- ==========================================
-         4. PACKING & TRIP ESSENTIALS (Jellycat Bunny & Bear)
+         4. TRIP LOGISTICS & DETAILS
+         ========================================== -->
+      <section id="logistics" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
+        <div class="pb-3 border-b border-ice-200/80 mb-4">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">Details</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Trip Logistics</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <!-- 1. Lodging Cost -->
+          <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
+              <i data-lucide="home" class="w-4 h-4"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Lodging</h3>
+                <span class="text-[11px] font-semibold text-slate-850 bg-ice-100/90 px-2 py-0.5 rounded-md shrink-0">$250 / person</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Covers your stay for the entire weekend at the cabin. Payment details will follow closer to the date.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Saturday Food & Drinks -->
+          <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
+              <i data-lucide="utensils" class="w-4 h-4"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Saturday Dinner</h3>
+                <span class="text-[11px] font-medium text-ice-500 bg-ice-50 border border-ice-200 px-2 py-0.5 rounded-md shrink-0">On Us!</span>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Saturday night engagement food, drinks &amp; champagne are completely on us — we will cater something delicious!
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Transportation & Carpool -->
+          <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
+              <i data-lucide="car" class="w-4 h-4"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Transportation</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                We'll organize and coordinate carpools as we get closer to the date so everyone has an easy ride up the mountain.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Ski / Snowboard Passes -->
+          <div class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
+              <i data-lucide="mountain-snow" class="w-4 h-4"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Ski &amp; Snowboard</h3>
+              <p class="text-xs sm:text-sm text-slate-600 mt-1">
+                Palisades is on the Ikon Pass. If you don't have an Ikon Pass, you can use a friend's buddy discount for day tickets — or you're welcome to relax at the cabin &amp; hot tub!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+         5. PACKING & TRIP ESSENTIALS (Jellycat Bunny & Bear)
          ========================================== -->
       <section class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
         <div class="pb-3 border-b border-ice-200/80 mb-4">
