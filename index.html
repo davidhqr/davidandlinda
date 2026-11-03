@@ -83,6 +83,11 @@
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
+
+    /* Keep site content hidden in DOM until unlocked */
+    #site-content.locked {
+      display: none !important;
+    }
   </style>
 </head>
 
@@ -94,7 +99,7 @@
   <!-- Password Protection Gate Modal -->
   <div id="password-gate" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-md">
     <div class="invitation-card relative overflow-hidden w-full max-w-sm rounded-3xl border border-ice-200 shadow-2xl p-8 text-center">
-      <!-- Decorative Snowflake -->
+      <!-- Decorative Lock Icon -->
       <div class="w-12 h-12 rounded-2xl bg-ice-100 border border-ice-200 flex items-center justify-center mx-auto mb-4 text-ice-500">
         <i data-lucide="lock" class="w-5 h-5"></i>
       </div>
@@ -123,7 +128,7 @@
     </div>
   </div>
 
-  <div id="site-content" class="filter blur-sm pointer-events-none transition-all duration-700">
+  <div id="site-content" class="locked">
   <!-- Minimal Top Nav -->
   <header class="sticky top-0 z-30 bg-white/85 backdrop-blur-md border-b border-ice-200/80">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
@@ -663,10 +668,11 @@
       }
     })();
 
-    // 0. Password Protection Gate
+    // 0. Password Protection Gate (SHA-256 Hashed + MutationObserver Anti-Tamper)
     (function initPasswordGate() {
-      const SITE_PASSWORD = 'tahoe'; // <-- Change this password to whatever you like!
-      const PASS_STORAGE_KEY = 'tahoe_site_authenticated_v1';
+      // SHA-256 hash of "tahoe"
+      const TARGET_HASH = '93086eb01e9d1bfb97941ab8b0305a415ff6c95350c33a92b23a9d70fa7281fc';
+      const PASS_STORAGE_KEY = 'tahoe_auth_token_v2';
 
       const gate = document.getElementById('password-gate');
       const content = document.getElementById('site-content');
@@ -674,23 +680,51 @@
       const input = document.getElementById('site-password-input');
       const errorMsg = document.getElementById('password-error');
 
-      function unlockSite() {
-        gate.classList.add('opacity-0', 'pointer-events-none');
-        setTimeout(() => gate.classList.add('hidden'), 400);
-        content.classList.remove('filter', 'blur-sm', 'pointer-events-none');
+      let isAuthenticated = false;
+
+      // SHA-256 helper via Web Crypto API
+      async function sha256(str) {
+        const buffer = new TextEncoder().encode(str);
+        const hash = await crypto.subtle.digest('SHA-256', buffer);
+        return Array.from(new Uint8Array(hash))
+          .map(b => b.toString(16).padStart(2, '0'))
+          .join('');
       }
 
-      // Check if already authenticated in this browser
-      if (sessionStorage.getItem(PASS_STORAGE_KEY) === 'true' || localStorage.getItem(PASS_STORAGE_KEY) === 'true') {
+      function unlockSite() {
+        isAuthenticated = true;
+        gate.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => gate.remove(), 400);
+        content.classList.remove('locked');
+      }
+
+      // Check storage
+      if (sessionStorage.getItem(PASS_STORAGE_KEY) === TARGET_HASH || localStorage.getItem(PASS_STORAGE_KEY) === TARGET_HASH) {
         unlockSite();
       }
 
-      form.addEventListener('submit', (e) => {
+      // MutationObserver: If someone inspects and tries to remove "locked" class or delete the gate modal, block it
+      const observer = new MutationObserver(() => {
+        if (!isAuthenticated) {
+          if (!content.classList.contains('locked')) {
+            content.classList.add('locked');
+          }
+          if (!document.getElementById('password-gate')) {
+            document.body.prepend(gate);
+          }
+        }
+      });
+
+      observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const entered = input.value.trim().toLowerCase();
-        if (entered === SITE_PASSWORD.toLowerCase()) {
-          sessionStorage.setItem(PASS_STORAGE_KEY, 'true');
-          localStorage.setItem(PASS_STORAGE_KEY, 'true');
+        const hash = await sha256(entered);
+
+        if (hash === TARGET_HASH) {
+          sessionStorage.setItem(PASS_STORAGE_KEY, hash);
+          localStorage.setItem(PASS_STORAGE_KEY, hash);
           unlockSite();
         } else {
           errorMsg.classList.remove('hidden');
