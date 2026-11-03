@@ -899,9 +899,9 @@
 
     // 0. Password Protection Gate (SHA-256 Hashed + MutationObserver Anti-Tamper)
     (function initPasswordGate() {
-      // SHA-256 hash of "tahoe"
-      const TARGET_HASH = '3ff74a580f8b39f039822455e92c2ef25658229622f16dc0f9918222c0be4900';
-      const PASS_STORAGE_KEY = 'tahoe_auth_token_v2';
+      // SHA-256 hash of "bunnyandbear"
+      const TARGET_HASH = '514829386e19827cdea5a5718834ae255b8d28ab8c6cbf96764ed392a82eccee';
+      const PASS_STORAGE_KEY = 'tahoe_auth_token_v3';
 
       const gate = document.getElementById('password-gate');
       const content = document.getElementById('site-content');
