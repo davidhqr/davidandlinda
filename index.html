@@ -340,7 +340,8 @@
             <span class="font-serif text-base font-semibold text-slate-850">
               <span id="cd-days">--</span>d :
               <span id="cd-hours">--</span>h :
-              <span id="cd-mins">--</span>m
+              <span id="cd-mins">--</span>m :
+              <span id="cd-secs">--</span>s
             </span>
           </div>
 
@@ -388,32 +389,20 @@
          ========================================== -->
       <section id="schedule"
         class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
-        <div
-          class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-ice-200/80 mb-4">
-          <div>
-            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The
-              Itinerary</span>
-            <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Weekend Schedule</h2>
-          </div>
-          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span
-              class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-slate-600">Fri–Sun
-              • Jan 22–24</span>
-            <span class="px-2.5 py-0.5 rounded-full bg-ice-500 text-white text-[11px] sm:text-xs font-medium">Saturday
-              Party Night</span>
-          </div>
+        <div class="pb-3 border-b border-ice-200/80 mb-4">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The
+            Itinerary</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Weekend Schedule</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           <!-- Friday -->
           <div class="rounded-xl sm:rounded-2xl bg-ice-50/70 border border-ice-200 p-4 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-2">
+              <div class="mb-2">
                 <span class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500">Fri • Jan 22</span>
-                <span
-                  class="text-[10px] px-2 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600 font-medium">Arrival</span>
               </div>
-              <h3 class="font-serif text-xl font-semibold text-slate-850 mb-2">Check-In &amp; Unwind</h3>
+              <h3 class="font-serif text-xl font-semibold text-slate-850 mb-2">Arrival</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
                   <i data-lucide="moon" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
@@ -431,30 +420,22 @@
           <div id="party"
             class="rounded-xl sm:rounded-2xl bg-white border-2 border-ice-400 p-4 sm:p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-2">
+              <div class="mb-2">
                 <span class="text-xs uppercase tracking-[0.16em] font-semibold text-ice-500">Sat • Jan 23</span>
-                <span
-                  class="text-[10px] px-2.5 py-0.5 rounded-full bg-ice-500 text-white font-semibold tracking-wide">Featured
-                  Event</span>
               </div>
-              <h3 class="font-serif text-xl sm:text-2xl font-semibold text-slate-850 mb-2">Ski Day &amp; Engagement
-                Party</h3>
+              <h3 class="font-serif text-xl font-semibold text-slate-850 mb-2">Ski &amp; Celebrate</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-750">
                 <li class="flex items-start gap-2">
                   <i data-lucide="mountain-snow" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
                   <span><strong>Daytime:</strong> Ski / snowboard at <a href="https://www.palisadestahoe.com/"
                       target="_blank" rel="noopener noreferrer"
                       class="underline decoration-ice-400 hover:text-ice-500 font-medium">Palisades Tahoe</a>, or relax
-                    at the cabin hot tub.</span>
-                </li>
-                <li class="flex items-start gap-2">
-                  <i data-lucide="camera" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span><strong>Group Photos:</strong> Freshen up for group pictures before dinner!</span>
+                    at the cabin.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="wine" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span><strong>Dinner &amp; Drinks on Us:</strong> Catered dinner, celebratory drinks &amp;
-                    champagne.</span>
+                  <span><strong>Evening:</strong> Catered dinner &amp;
+                    celebratory drinks.</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="sparkles" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
@@ -467,13 +448,10 @@
           <!-- Sunday -->
           <div class="rounded-xl sm:rounded-2xl bg-ice-50/70 border border-ice-200 p-4 flex flex-col justify-between">
             <div>
-              <div class="flex items-center justify-between mb-2">
+              <div class="mb-2">
                 <span class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500">Sun • Jan 24</span>
-                <span
-                  class="text-[10px] px-2 py-0.5 rounded-full bg-white border border-ice-200 text-slate-600 font-medium">Wrap
-                  Up</span>
               </div>
-              <h3 class="font-serif text-xl font-semibold text-slate-850 mb-2">Checkout &amp; Head Home</h3>
+              <h3 class="font-serif text-xl font-semibold text-slate-850 mb-2">Head Home</h3>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
                   <i data-lucide="package" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
@@ -497,21 +475,10 @@
          3. CABIN & TRIP LOGISTICS
          ========================================== -->
       <section id="cabin" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
-        <div id="logistics"
-          class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-ice-200/80 mb-4">
-          <div>
-            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The Stay
-              &amp; Details</span>
-            <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Cabin &amp; Logistics</h2>
-          </div>
-          <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <span
-              class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-slate-600">Near
-              Palisades</span>
-            <span
-              class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-slate-600">Hot
-              Tub &amp; Games</span>
-          </div>
+        <div id="logistics" class="pb-3 border-b border-ice-200/80 mb-4">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The Stay
+            &amp; Details</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Cabin &amp; Logistics</h2>
         </div>
 
         <!-- 3 Quick Action Links -->
@@ -589,7 +556,7 @@
                   person</span>
               </div>
               <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
-                Covers your stay for the entire weekend at the cabin (Friday through Sunday).
+                Covers your stay for the entire weekend at the cabin.
               </p>
             </div>
           </div>
@@ -609,7 +576,7 @@
                   Us!</span>
               </div>
               <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
-                Saturday night engagement food, drinks &amp; champagne are completely on us — we will cater something
+                Saturday night engagement food &amp; drinks are on us — we will cater something
                 delicious!
               </p>
             </div>
@@ -625,8 +592,7 @@
             <div class="min-w-0 flex-1">
               <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Transportation</h3>
               <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
-                We'll organize and coordinate carpools as we get closer to the date so everyone has an easy ride up the
-                mountain.
+                We'll organize and coordinate carpools as we get closer to the date.
               </p>
             </div>
           </div>
@@ -641,8 +607,8 @@
             <div class="min-w-0 flex-1">
               <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Ski &amp; Snowboard</h3>
               <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
-                Palisades is on the Ikon Pass. If you don't have an Ikon Pass, you can use a friend's buddy discount for
-                day tickets — or you're welcome to relax at the cabin &amp; hot tub!
+                Palisades is on the Ikon Pass. You can also use our buddy discount for
+                day passes — or just relax at the cabin &amp; hot tub!
               </p>
             </div>
           </div>
@@ -654,50 +620,50 @@
          ========================================== -->
       <section id="vibes" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
         <a id="packing" class="sr-only"></a>
-        <div
-          class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-ice-200/80 mb-4">
-          <div>
-            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">Saturday
-              Daytime</span>
-            <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Choose Your Vibe</h2>
-          </div>
-          <span class="text-xs text-slate-500 italic max-w-sm sm:text-right">
-            Spend your Saturday on the slopes or relaxing at the cabin — we all reunite for dinner &amp; drinks at night.
-          </span>
+        <div class="pb-3 border-b border-ice-200/80 mb-4">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">Saturday
+            Daytime</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Choose Your Vibe</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 pt-2">
           <!-- Bunny's Card: The Cabin Crew -->
           <div
-            class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
-            <div>
+            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            <!-- Washi Tape Straddling Top Edge -->
+            <div
+              class="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-4 sm:h-4.5 bg-ice-200/75 backdrop-blur-sm border border-white/60 rotate-[-1deg] rounded-sm pointer-events-none z-20">
+            </div>
+
+            <!-- Watermark Container (Clipped to Card Shape) -->
+            <div class="absolute inset-0 overflow-hidden rounded-xl sm:rounded-2xl pointer-events-none z-0">
+              <i data-lucide="snowflake"
+                class="w-32 h-32 text-ice-200/35 absolute -bottom-4 -right-4 stroke-[1.2] rotate-12"></i>
+            </div>
+
+            <div class="relative z-10">
               <div class="flex items-center gap-3 mb-3 pb-2.5 border-b border-ice-100">
                 <div class="w-11 h-11 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
                   <img src="jellycat-bunny.jpg" alt="Bashful Bunny" class="w-full h-full object-cover object-center" />
                 </div>
                 <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bunny's Vibe
-                    </h3>
-                    <span
-                      class="text-[10px] px-2 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-ice-600 font-medium">The
-                      Cabin Crew</span>
-                  </div>
-                  <p class="text-[11px] text-slate-500">Cozy, relaxed &amp; warm</p>
+                  <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bunny's Vibe
+                  </h3>
+                  <p class="text-[11px] text-slate-500">The Cabin Crew</p>
                 </div>
               </div>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
-                  <i data-lucide="coffee" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>Slow morning coffee &amp; cabin breakfast</span>
+                  <i data-lucide="snowflake" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Easy bunny slopes &amp; relaxed scenic laps</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="waves" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>Hot tubbing &amp; peaceful snowy patio lounging</span>
+                  <span>Hot tubbing &amp; lounging by the fireplace</span>
                 </li>
                 <li class="flex items-start gap-2">
-                  <i data-lucide="dices" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>Board games, card games &amp; fireplace downtime</span>
+                  <i data-lucide="wine" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Après-ski drinks &amp; cabin hangout</span>
                 </li>
               </ul>
             </div>
@@ -705,21 +671,28 @@
 
           <!-- Bear's Card: The Mountain Crew -->
           <div
-            class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
-            <div>
+            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            <!-- Washi Tape Straddling Top Edge -->
+            <div
+              class="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-4 sm:h-4.5 bg-ice-200/75 backdrop-blur-sm border border-white/60 rotate-[1.5deg] rounded-sm pointer-events-none z-20">
+            </div>
+
+            <!-- Watermark Container (Clipped to Card Shape) -->
+            <div class="absolute inset-0 overflow-hidden rounded-xl sm:rounded-2xl pointer-events-none z-0">
+              <i data-lucide="mountain-snow"
+                class="w-32 h-32 text-ice-200/30 absolute -bottom-4 -right-4 stroke-[1.2] -rotate-6"></i>
+            </div>
+
+            <div class="relative z-10">
               <div class="flex items-center gap-3 mb-3 pb-2.5 border-b border-ice-100">
                 <div class="w-11 h-11 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
-                  <img src="jellycat-bear.jpg" alt="Bartholomew Bear" class="w-full h-full object-cover object-center" />
+                  <img src="jellycat-bear.jpg" alt="Bartholomew Bear"
+                    class="w-full h-full object-cover object-center" />
                 </div>
                 <div>
-                  <div class="flex items-center gap-2">
-                    <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bear's Vibe
-                    </h3>
-                    <span
-                      class="text-[10px] px-2 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-ice-600 font-medium">The
-                      Mountain Crew</span>
-                  </div>
-                  <p class="text-[11px] text-slate-500">Slopes, powder &amp; fresh air</p>
+                  <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bear's Vibe
+                  </h3>
+                  <p class="text-[11px] text-slate-500">The Mountain Crew</p>
                 </div>
               </div>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
@@ -729,11 +702,11 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="snowflake" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>Ski laps, groomers &amp; crisp mountain air</span>
+                  <span>Tree runs, groomers &amp; crisp mountain air</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="sparkles" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>Après-ski hangout &amp; swapping stories back at the cabin</span>
+                  <span>Ripping bowls &amp; non-stop mountain laps</span>
                 </li>
               </ul>
             </div>
@@ -832,7 +805,6 @@
           </button>
         </form>
       </section>
-
     </main>
 
     <!-- Minimal Footer -->
@@ -863,7 +835,7 @@
       photos.forEach((p) => {
         const img = new Image();
         img.src = p.src;
-        if (img.decode) img.decode().catch(() => {});
+        if (img.decode) img.decode().catch(() => { });
       });
 
       function preloadPhoto(src) {
@@ -1114,6 +1086,7 @@
       const dEl = document.getElementById('cd-days');
       const hEl = document.getElementById('cd-hours');
       const mEl = document.getElementById('cd-mins');
+      const sEl = document.getElementById('cd-secs');
 
       function tick() {
         const diff = target.getTime() - Date.now();
@@ -1121,15 +1094,17 @@
           dEl.textContent = '0';
           hEl.textContent = '0';
           mEl.textContent = '0';
+          if (sEl) sEl.textContent = '0';
           return;
         }
         dEl.textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
         hEl.textContent = Math.floor((diff / (1000 * 60 * 60)) % 24);
         mEl.textContent = Math.floor((diff / 1000 / 60) % 60);
+        if (sEl) sEl.textContent = Math.floor((diff / 1000) % 60);
       }
 
       tick();
-      setInterval(tick, 30000);
+      setInterval(tick, 1000);
     })();
 
     // 2. Simple Yes / No RSVP Handler (Submits natively via hidden iframe & saves to localStorage)
