@@ -150,7 +150,7 @@
         <nav class="hidden md:flex items-center gap-6 text-xs uppercase tracking-[0.16em] text-slate-600 font-medium">
           <a href="#schedule" class="hover:text-slate-900 transition-colors">Schedule</a>
           <a href="#cabin" class="hover:text-slate-900 transition-colors">Cabin &amp; Logistics</a>
-          <a href="#packing" class="hover:text-slate-900 transition-colors">What to Bring</a>
+          <a href="#vibes" class="hover:text-slate-900 transition-colors">Choose Your Vibe</a>
           <a href="#rsvp"
             class="px-3.5 py-1.5 rounded-full bg-ice-500 text-white hover:bg-ice-400 transition-colors">RSVP</a>
         </nav>
@@ -177,9 +177,9 @@
         <a href="#cabin"
           class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-ice-50">Cabin
           &amp; Logistics</a>
-        <a href="#packing"
-          class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-ice-50">What
-          to Bring</a>
+        <a href="#vibes"
+          class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-medium text-slate-700 hover:bg-ice-50">Choose
+          Your Vibe</a>
         <a href="#rsvp"
           class="mobile-nav-link block px-3 py-2 rounded-xl text-sm font-semibold text-ice-500 hover:bg-ice-50">RSVP
           Form</a>
@@ -650,70 +650,101 @@
       </section>
 
       <!-- ==========================================
-         4. WHAT TO BRING (Jellycat Packing Checklist)
+         4. CHOOSE YOUR VIBE: SLOPES VS. CABIN
          ========================================== -->
-      <section id="packing" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
-        <div class="pb-3 border-b border-ice-200/80 mb-4">
-          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">Prep</span>
-          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">What to Bring</h2>
+      <section id="vibes" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
+        <a id="packing" class="sr-only"></a>
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 border-b border-ice-200/80 mb-4">
+          <div>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">Saturday
+              Daytime</span>
+            <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Choose Your Vibe</h2>
+          </div>
+          <span class="text-xs text-slate-500 italic max-w-sm sm:text-right">
+            Spend your Saturday on the slopes or relaxing at the cabin — we all reunite for dinner &amp; drinks at night.
+          </span>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-          <!-- Bunny's Card -->
-          <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm">
-            <div class="flex items-center gap-3 mb-3 pb-2 border-b border-ice-100">
-              <div class="w-10 h-10 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
-                <img src="jellycat-bunny.jpg" alt="Jellycat Bunny" class="w-full h-full object-cover object-center" />
+          <!-- Bunny's Card: The Cabin Crew -->
+          <div
+            class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3 pb-2.5 border-b border-ice-100">
+                <div class="w-11 h-11 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
+                  <img src="jellycat-bunny.jpg" alt="Bashful Bunny" class="w-full h-full object-cover object-center" />
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bunny's Vibe
+                    </h3>
+                    <span
+                      class="text-[10px] px-2 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-ice-600 font-medium">The
+                      Cabin Crew</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500">Cozy, relaxed &amp; warm</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bashful Bunny's
-                  Cabin List</h3>
-                <p class="text-[11px] text-slate-500">Cabin lounging &amp; relaxation</p>
-              </div>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="coffee" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Slow morning coffee &amp; cabin breakfast</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="waves" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Hot tubbing &amp; peaceful snowy patio lounging</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="dices" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Board games, card games &amp; fireplace downtime</span>
+                </li>
+              </ul>
             </div>
-            <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Cabin Lounging:</strong> Socks, slippers &amp; cozy layers.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Saturday Evening:</strong> Cute outfit for photos!</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Hot Tub:</strong> Swimsuit &amp; sandals / flip-flops.</span>
-              </li>
-            </ul>
           </div>
 
-          <!-- Bear's Card -->
-          <div class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm">
-            <div class="flex items-center gap-3 mb-3 pb-2 border-b border-ice-100">
-              <div class="w-10 h-10 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
-                <img src="jellycat-bear.jpg" alt="Jellycat Bear" class="w-full h-full object-cover object-center" />
+          <!-- Bear's Card: The Mountain Crew -->
+          <div
+            class="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3 pb-2.5 border-b border-ice-100">
+                <div class="w-11 h-11 rounded-full overflow-hidden border border-ice-200 shadow-sm shrink-0">
+                  <img src="jellycat-bear.jpg" alt="Bartholomew Bear" class="w-full h-full object-cover object-center" />
+                </div>
+                <div>
+                  <div class="flex items-center gap-2">
+                    <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bear's Vibe
+                    </h3>
+                    <span
+                      class="text-[10px] px-2 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-ice-600 font-medium">The
+                      Mountain Crew</span>
+                  </div>
+                  <p class="text-[11px] text-slate-500">Slopes, powder &amp; fresh air</p>
+                </div>
               </div>
-              <div>
-                <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850 leading-tight">Bartholomew
-                  Bear's Mountain List</h3>
-                <p class="text-[11px] text-slate-500">Slopes &amp; winter travel</p>
-              </div>
+              <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                <li class="flex items-start gap-2">
+                  <i data-lucide="mountain-snow" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>First chair at Palisades Tahoe</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="snowflake" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Ski laps, groomers &amp; crisp mountain air</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
+                  <span>Après-ski hangout &amp; swapping stories back at the cabin</span>
+                </li>
+              </ul>
             </div>
-            <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Passes:</strong> Ikon Pass or lift tickets.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Gear:</strong> Outerwear, gloves, goggles &amp; boots.</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
-                <span><strong>Winter Car Prep:</strong> AWD, tire chains, ice scraper.</span>
-              </li>
-            </ul>
           </div>
+        </div>
+
+        <!-- Bottom Reassurance Banner -->
+        <div class="mt-4 p-3 rounded-xl sm:rounded-2xl bg-ice-50/80 border border-ice-200/80 text-center">
+          <p class="text-xs sm:text-sm text-slate-600">
+            <span class="font-semibold text-slate-850">No pressure either way:</span> Spend your Saturday on the slopes or relaxing at the cabin — we all reunite for dinner &amp; drinks at night! 🥂
+          </p>
         </div>
       </section>
 
