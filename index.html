@@ -77,7 +77,7 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
-      z-index: 10;
+      z-index: 25;
     }
 
     .invitation-card {
@@ -85,15 +85,15 @@
         radial-gradient(circle at 12% 10%, rgba(181, 211, 231, 0.35) 0%, transparent 45%),
         radial-gradient(circle at 88% 12%, rgba(181, 211, 231, 0.3) 0%, transparent 45%),
         radial-gradient(circle at 50% 95%, rgba(181, 211, 231, 0.32) 0%, transparent 50%),
-        rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+        rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     .glass-panel {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.76);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
 
     /* Keep site content hidden in DOM until unlocked */
@@ -186,7 +186,7 @@
       </div>
     </header>
 
-    <main id="top" class="relative z-20 max-w-4xl mx-auto px-3.5 sm:px-6 py-6 sm:py-12 space-y-6 sm:space-y-10">
+    <main id="top" class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-12 space-y-8 sm:space-y-12">
 
       <!-- ==========================================
          1. HERO INVITATION CARD (Matches Winter Wonderland Card)
@@ -391,11 +391,16 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
           <!-- Friday -->
-          <div class="rounded-xl sm:rounded-2xl bg-ice-50/70 border border-ice-200 p-4 flex flex-col justify-between">
+          <div
+            class="rounded-xl sm:rounded-2xl bg-white/65 border border-ice-200/80 p-4 flex flex-col justify-between backdrop-blur-sm">
             <div>
-              <div class="flex items-baseline justify-between gap-2 mb-2">
+              <div
+                class="flex flex-row md:flex-col-reverse items-baseline md:items-start justify-between md:justify-start gap-2 md:gap-0.5 mb-2">
                 <h3 class="font-serif text-xl font-semibold text-slate-850">Arrival</h3>
-                <span class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500 shrink-0 text-right">Fri • Jan 22</span>
+                <span
+                  class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500 shrink-0 text-right md:text-left">Fri
+                  •
+                  Jan 22</span>
               </div>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
@@ -412,18 +417,27 @@
 
           <!-- Saturday: The Featured Engagement Party Card -->
           <div id="party"
-            class="rounded-xl sm:rounded-2xl bg-white border-2 border-ice-400 p-4 sm:p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
-            <div>
-              <div class="flex items-baseline justify-between gap-2 mb-2">
+            class="rounded-xl sm:rounded-2xl bg-white/90 border-2 border-ice-400/90 p-4 sm:p-5 shadow-sm relative flex flex-col justify-between backdrop-blur-sm">
+            <!-- Washi Tape Straddling Top Edge -->
+            <div
+              class="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-4 sm:h-4.5 bg-ice-200/75 backdrop-blur-sm border border-white/60 rotate-[-0.8deg] rounded-sm pointer-events-none z-20">
+            </div>
+
+            <div class="relative z-10">
+              <div
+                class="flex flex-row md:flex-col-reverse items-baseline md:items-start justify-between md:justify-start gap-2 md:gap-0.5 mb-2">
                 <h3 class="font-serif text-xl font-semibold text-slate-850">Ski &amp; Celebrate</h3>
-                <span class="text-xs uppercase tracking-[0.16em] font-semibold text-ice-500 shrink-0 text-right">Sat • Jan 23</span>
+                <span
+                  class="text-xs uppercase tracking-[0.16em] font-semibold text-ice-500 shrink-0 text-right md:text-left">Sat
+                  •
+                  Jan 23</span>
               </div>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-750">
                 <li class="flex items-start gap-2">
                   <i data-lucide="mountain-snow" class="w-3.5 h-3.5 text-ice-500 shrink-0 mt-0.5"></i>
                   <span><strong>Daytime:</strong> Ski / snowboard at <a href="https://www.palisadestahoe.com/"
                       target="_blank" rel="noopener noreferrer"
-                      class="underline decoration-ice-400 hover:text-ice-500 font-medium">Palisades Tahoe</a>, or relax
+                      class="underline decoration-ice-400 hover:text-ice-500 font-medium">Palisades</a>, or relax
                     at the cabin.</span>
                 </li>
                 <li class="flex items-start gap-2">
@@ -440,11 +454,16 @@
           </div>
 
           <!-- Sunday -->
-          <div class="rounded-xl sm:rounded-2xl bg-ice-50/70 border border-ice-200 p-4 flex flex-col justify-between">
+          <div
+            class="rounded-xl sm:rounded-2xl bg-white/65 border border-ice-200/80 p-4 flex flex-col justify-between backdrop-blur-sm">
             <div>
-              <div class="flex items-baseline justify-between gap-2 mb-2">
+              <div
+                class="flex flex-row md:flex-col-reverse items-baseline md:items-start justify-between md:justify-start gap-2 md:gap-0.5 mb-2">
                 <h3 class="font-serif text-xl font-semibold text-slate-850">Head Home</h3>
-                <span class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500 shrink-0 text-right">Sun • Jan 24</span>
+                <span
+                  class="text-xs uppercase tracking-[0.16em] font-semibold text-slate-500 shrink-0 text-right md:text-left">Sun
+                  •
+                  Jan 24</span>
               </div>
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
@@ -469,10 +488,15 @@
          3. CABIN & TRIP LOGISTICS
          ========================================== -->
       <section id="cabin" class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8">
-        <div id="logistics" class="pb-3 border-b border-ice-200/80 mb-4">
-          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The Stay
-            &amp; Details</span>
-          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Cabin &amp; Logistics</h2>
+        <div id="logistics"
+          class="pb-3 border-b border-ice-200/80 mb-4 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-1">
+          <div>
+            <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">The Stay
+              &amp; Details</span>
+            <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold">Cabin &amp; Logistics</h2>
+          </div>
+          <span class="text-[10px] sm:text-[11px] tracking-[0.18em] uppercase text-slate-400 font-medium">39.197° N,
+            120.235° W • Elev. 6,250 ft</span>
         </div>
 
         <!-- 3 Quick Action Links -->
@@ -480,14 +504,15 @@
           <!-- Link 1: Tour the Cabin -->
           <a href="https://www.airbnb.com/rooms/1533107665252646579?source_impression_id=p3_1793562693_P3m4186kMCIKa663"
             target="_blank" rel="noopener noreferrer"
-            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all">
+            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/70 hover:bg-white/90 border border-ice-200/80 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all backdrop-blur-sm">
             <div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 min-w-0">
               <div
                 class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
                 <i data-lucide="home" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
               </div>
               <div class="min-w-0">
-                <h3 class="font-serif text-xs sm:text-base font-semibold text-slate-850 leading-tight truncate">Tour Cabin
+                <h3 class="font-serif text-xs sm:text-base font-semibold text-slate-850 leading-tight truncate">Tour
+                  Cabin
                 </h3>
                 <p class="hidden sm:block text-[11px] text-slate-500">Airbnb photos &amp; rooms</p>
               </div>
@@ -499,7 +524,7 @@
           <!-- Link 2: Join Co-Travelers -->
           <a href="https://www.airbnb.com/l/cdt9HwI7?s=67&unique_share_id=d47ffb55-2aa4-492e-b373-93d39903984d"
             target="_blank" rel="noopener noreferrer"
-            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all">
+            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/70 hover:bg-white/90 border border-ice-200/80 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all backdrop-blur-sm">
             <div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 min-w-0">
               <div
                 class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
@@ -517,14 +542,15 @@
 
           <!-- Link 3: Palisades Tahoe -->
           <a href="https://www.palisadestahoe.com/" target="_blank" rel="noopener noreferrer"
-            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-ice-50/80 hover:bg-ice-100/80 border border-ice-200 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all">
+            class="group p-2 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/70 hover:bg-white/90 border border-ice-200/80 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left transition-all backdrop-blur-sm">
             <div class="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-2.5 min-w-0">
               <div
                 class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white border border-ice-200 flex items-center justify-center text-ice-500 shrink-0">
                 <i data-lucide="mountain-snow" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
               </div>
               <div class="min-w-0">
-                <h3 class="font-serif text-xs sm:text-base font-semibold text-slate-850 leading-tight truncate">Palisades
+                <h3 class="font-serif text-xs sm:text-base font-semibold text-slate-850 leading-tight truncate">
+                  Palisades
                 </h3>
                 <p class="hidden sm:block text-[11px] text-slate-500">Mountain &amp; lift passes</p>
               </div>
@@ -538,12 +564,15 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3.5">
           <!-- 1. Lodging Cost -->
           <div
-            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            class="relative overflow-hidden p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/75 border border-ice-200/80 shadow-sm flex items-start gap-3 backdrop-blur-sm">
+            <!-- Subtle Watermark -->
+            <i data-lucide="trees"
+              class="w-20 h-20 text-ice-200/25 absolute -bottom-3 -right-2 pointer-events-none stroke-[1.2]"></i>
             <div
-              class="w-8 h-8 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
+              class="w-8 h-8 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5 relative z-10">
               <i data-lucide="home" class="w-4 h-4"></i>
             </div>
-            <div class="min-w-0 flex-1">
+            <div class="min-w-0 flex-1 relative z-10">
               <div class="flex items-center justify-between gap-2">
                 <h3 class="font-serif text-base sm:text-lg font-semibold text-slate-850">Lodging</h3>
                 <span
@@ -558,7 +587,7 @@
 
           <!-- 2. Saturday Food & Drinks -->
           <div
-            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/75 border border-ice-200/80 shadow-sm flex items-start gap-3 backdrop-blur-sm">
             <div
               class="w-8 h-8 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
               <i data-lucide="utensils" class="w-4 h-4"></i>
@@ -579,7 +608,7 @@
 
           <!-- 3. Transportation & Carpool -->
           <div
-            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/75 border border-ice-200/80 shadow-sm flex items-start gap-3 backdrop-blur-sm">
             <div
               class="w-8 h-8 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
               <i data-lucide="car" class="w-4 h-4"></i>
@@ -594,7 +623,7 @@
 
           <!-- 4. Ski / Snowboard Passes -->
           <div
-            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/90 border border-ice-200 shadow-sm flex items-start gap-3">
+            class="p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-white/75 border border-ice-200/80 shadow-sm flex items-start gap-3 backdrop-blur-sm">
             <div
               class="w-8 h-8 rounded-lg bg-ice-50 border border-ice-200 flex items-center justify-center text-ice-500 shrink-0 mt-0.5">
               <i data-lucide="mountain-snow" class="w-4 h-4"></i>
@@ -624,7 +653,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-4 pt-2">
           <!-- Bunny's Card: The Cabin Crew -->
           <div
-            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/80 border border-ice-200/80 shadow-sm flex flex-col justify-between backdrop-blur-sm">
             <!-- Washi Tape Straddling Top Edge -->
             <div
               class="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-4 sm:h-4.5 bg-ice-200/75 backdrop-blur-sm border border-white/60 rotate-[-1deg] rounded-sm pointer-events-none z-20">
@@ -666,7 +695,7 @@
 
           <!-- Bear's Card: The Mountain Crew -->
           <div
-            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/95 border border-ice-200/90 shadow-sm flex flex-col justify-between">
+            class="relative p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/80 border border-ice-200/80 shadow-sm flex flex-col justify-between backdrop-blur-sm">
             <!-- Washi Tape Straddling Top Edge -->
             <div
               class="absolute -top-2.5 sm:-top-3 left-1/2 -translate-x-1/2 w-14 sm:w-16 h-4 sm:h-4.5 bg-ice-200/75 backdrop-blur-sm border border-white/60 rotate-[1.5deg] rounded-sm pointer-events-none z-20">
@@ -693,7 +722,7 @@
               <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
                 <li class="flex items-start gap-2">
                   <i data-lucide="mountain-snow" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
-                  <span>First chair at Palisades Tahoe</span>
+                  <span>First chair at Palisades</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <i data-lucide="snowflake" class="w-4 h-4 text-ice-500 shrink-0 mt-0.5"></i>
@@ -713,92 +742,120 @@
          5. SIMPLE YES / NO RSVP
          ========================================== -->
       <section id="rsvp"
-        class="glass-panel rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8 max-w-xl mx-auto text-center">
-        <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">RSVP</span>
-        <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold mt-0.5 mb-2">Are You Joining Us?</h2>
-        <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-5">
-          <span
-            class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-slate-600">Jan
-            22–24, 2027</span>
-          <span
-            class="px-2.5 py-0.5 rounded-full bg-white border border-ice-300 text-[11px] sm:text-xs font-semibold text-slate-850">$250
-            / person lodging</span>
-          <span
-            class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-ice-500 font-medium">Saturday
-            Dinner &amp; Drinks on Us</span>
+        class="glass-panel relative overflow-hidden rounded-2xl sm:rounded-3xl border border-ice-200 shadow-card p-4 sm:p-8 max-w-xl mx-auto text-center">
+        <!-- Vintage Alpine Postmark Stamp -->
+        <div
+          class="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 pointer-events-none select-none opacity-40 sm:opacity-50 rotate-[-10deg]">
+          <svg class="w-16 h-16 sm:w-20 sm:h-20 text-ice-500" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+            <!-- Double circular rings -->
+            <circle cx="50" cy="50" r="46" stroke-width="1.2" stroke-dasharray="3.5 2" />
+            <circle cx="50" cy="50" r="41" stroke-width="0.8" />
+            <!-- Curved text path -->
+            <path id="stamp-curve-top" d="M 16 50 A 34 34 0 0 1 84 50" fill="none" stroke="none" />
+            <path id="stamp-curve-bot" d="M 84 50 A 34 34 0 0 1 16 50" fill="none" stroke="none" />
+            <text font-size="6.5" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" letter-spacing="1.5"
+              fill="currentColor">
+              <textPath href="#stamp-curve-top" startOffset="50%" text-anchor="middle">LAKE TAHOE • CA</textPath>
+            </text>
+            <text font-size="6" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" letter-spacing="1.5"
+              fill="currentColor">
+              <textPath href="#stamp-curve-bot" startOffset="50%" text-anchor="middle">JAN 22-24 • 2027</textPath>
+            </text>
+            <!-- Center Mountain Peak & Monogram -->
+            <path d="M 40 52 L 50 38 L 60 52 Z" stroke-width="1" fill="none" />
+            <text x="50" y="61" font-size="7.5" font-family="'Alex Brush', cursive" text-anchor="middle"
+              fill="currentColor">D &amp; L</text>
+          </svg>
         </div>
 
-        <!-- Hidden iframe so Google Forms submits natively -->
-        <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" class="hidden"
-          title="RSVP submission target"></iframe>
-
-        <!-- Status Card for Returning Visitors who already submitted -->
-        <div id="rsvp-saved-card"
-          class="hidden text-left p-4 sm:p-5 rounded-2xl bg-white border border-ice-200 shadow-sm mb-4">
-          <div class="flex items-center justify-between mb-2 pb-2 border-b border-ice-100">
-            <span class="text-xs uppercase tracking-[0.16em] text-ice-500 font-semibold flex items-center gap-1.5">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-ice-500"></i>
-              RSVP Confirmed
-            </span>
-            <button type="button" id="rsvp-edit-btn"
-              class="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4 flex items-center gap-1">
-              <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
-              Change Response
-            </button>
-          </div>
-          <p class="text-base text-slate-850 font-medium">
-            <span id="saved-guest-name"></span>
-          </p>
-          <p class="text-sm text-slate-600 mt-1">
-            Status: <strong id="saved-guest-status" class="text-slate-850"></strong>
-          </p>
-        </div>
-
-        <form id="rsvp-form"
-          action="https://docs.google.com/forms/d/e/1FAIpQLSf1gKiAZarczTK4Sg8ulqNTs2bgUvZrOUFcSdsxqP-f7k0CsA/formResponse"
-          method="POST" target="hidden_rsvp_iframe" class="space-y-3.5 text-left">
-          <div>
-            <label for="guest-name" class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
-              Your Name
-            </label>
-            <input type="text" id="guest-name" name="entry.1498135098" required placeholder="Enter your name"
-              class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
+        <div class="relative z-10">
+          <span class="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-ice-500 font-semibold">RSVP</span>
+          <h2 class="font-serif text-2xl sm:text-3xl text-slate-850 font-semibold mt-0.5 mb-2">Are You Joining Us?</h2>
+          <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mb-5">
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-slate-600">Jan
+              22–24, 2027</span>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-white border border-ice-300 text-[11px] sm:text-xs font-semibold text-slate-850">$250
+              / person lodging</span>
+            <span
+              class="px-2.5 py-0.5 rounded-full bg-ice-50 border border-ice-200 text-[11px] sm:text-xs text-ice-500 font-medium">Saturday
+              Dinner &amp; Drinks on Us</span>
           </div>
 
-          <!-- Simple Yes / No Selection -->
-          <div>
-            <span class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
-              Can you attend?
-            </span>
-            <div class="grid grid-cols-2 gap-2 sm:gap-3">
-              <label class="cursor-pointer">
-                <input type="radio" name="entry.877086558" value="Yes, I'll be there!" class="peer sr-only" checked />
-                <div
-                  class="py-3 px-2 sm:py-3.5 sm:px-4 rounded-xl bg-white border border-ice-200 text-center text-xs sm:text-sm font-semibold text-slate-600 peer-checked:bg-ice-500 peer-checked:text-white peer-checked:border-ice-500 whitespace-nowrap transition-all">
-                  Yes, I'll be there!
-                </div>
-              </label>
+          <!-- Hidden iframe so Google Forms submits natively -->
+          <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" class="hidden"
+            title="RSVP submission target"></iframe>
 
-              <label class="cursor-pointer">
-                <input type="radio" name="entry.877086558" value="Sorry, can't make it" class="peer sr-only" />
-                <div
-                  class="py-3 px-2 sm:py-3.5 sm:px-4 rounded-xl bg-white border border-ice-200 text-center text-xs sm:text-sm font-semibold text-slate-600 peer-checked:bg-slate-850 peer-checked:text-white peer-checked:border-slate-850 whitespace-nowrap transition-all">
-                  Sorry, can't make it
-                </div>
-              </label>
+          <!-- Status Card for Returning Visitors who already submitted -->
+          <div id="rsvp-saved-card"
+            class="hidden text-left p-4 sm:p-5 rounded-2xl bg-white border border-ice-200 shadow-sm mb-4">
+            <div class="flex items-center justify-between mb-2 pb-2 border-b border-ice-100">
+              <span class="text-xs uppercase tracking-[0.16em] text-ice-500 font-semibold flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-ice-500"></i>
+                RSVP Confirmed
+              </span>
+              <button type="button" id="rsvp-edit-btn"
+                class="text-xs text-slate-500 hover:text-slate-900 underline underline-offset-4 flex items-center gap-1">
+                <i data-lucide="edit-3" class="w-3.5 h-3.5"></i>
+                Change Response
+              </button>
             </div>
+            <p class="text-base text-slate-850 font-medium">
+              <span id="saved-guest-name"></span>
+            </p>
+            <p class="text-sm text-slate-600 mt-1">
+              Status: <strong id="saved-guest-status" class="text-slate-850"></strong>
+            </p>
           </div>
 
-          <!-- Feedback Message -->
-          <div id="rsvp-toast"
-            class="hidden p-3 rounded-xl bg-ice-100 border border-ice-300 text-xs text-slate-850 text-center font-medium">
-          </div>
+          <form id="rsvp-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSf1gKiAZarczTK4Sg8ulqNTs2bgUvZrOUFcSdsxqP-f7k0CsA/formResponse"
+            method="POST" target="hidden_rsvp_iframe" class="space-y-3.5 text-left">
+            <div>
+              <label for="guest-name"
+                class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
+                Your Name
+              </label>
+              <input type="text" id="guest-name" name="entry.1498135098" required placeholder="Enter your name"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-ice-200 text-sm text-slate-850 placeholder:text-slate-400 focus:outline-none focus:border-ice-500" />
+            </div>
 
-          <button type="submit" id="rsvp-submit-btn"
-            class="w-full py-3.5 px-6 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all disabled:opacity-60">
-            Confirm RSVP
-          </button>
-        </form>
+            <!-- Simple Yes / No Selection -->
+            <div>
+              <span class="block text-xs uppercase tracking-[0.16em] text-slate-500 font-medium mb-1.5">
+                Can you attend?
+              </span>
+              <div class="grid grid-cols-2 gap-2 sm:gap-3">
+                <label class="cursor-pointer">
+                  <input type="radio" name="entry.877086558" value="Yes, I'll be there!" class="peer sr-only" checked />
+                  <div
+                    class="py-3 px-2 sm:py-3.5 sm:px-4 rounded-xl bg-white border border-ice-200 text-center text-xs sm:text-sm font-semibold text-slate-600 peer-checked:bg-ice-500 peer-checked:text-white peer-checked:border-ice-500 whitespace-nowrap transition-all">
+                    Yes, I'll be there!
+                  </div>
+                </label>
+
+                <label class="cursor-pointer">
+                  <input type="radio" name="entry.877086558" value="Sorry, can't make it" class="peer sr-only" />
+                  <div
+                    class="py-3 px-2 sm:py-3.5 sm:px-4 rounded-xl bg-white border border-ice-200 text-center text-xs sm:text-sm font-semibold text-slate-600 peer-checked:bg-slate-850 peer-checked:text-white peer-checked:border-slate-850 whitespace-nowrap transition-all">
+                    Sorry, can't make it
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Feedback Message -->
+            <div id="rsvp-toast"
+              class="hidden p-3 rounded-xl bg-ice-100 border border-ice-300 text-xs text-slate-850 text-center font-medium">
+            </div>
+
+            <button type="submit" id="rsvp-submit-btn"
+              class="w-full py-3.5 px-6 rounded-xl bg-slate-850 hover:bg-slate-700 text-white text-xs uppercase tracking-[0.2em] font-semibold transition-all disabled:opacity-60">
+              Confirm RSVP
+            </button>
+          </form>
+        </div><!-- /.relative z-10 -->
       </section>
     </main>
 
@@ -1186,19 +1243,20 @@
         h = canvas.height = window.innerHeight;
       });
 
-      const count = w < 640 ? 32 : 58;
+      const isMobile = w < 640;
+      const count = isMobile ? 14 : 28;
       const flakes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        size: Math.random() * 5 + 4,
-        vy: Math.random() * 0.7 + 0.35,
-        vx: (Math.random() - 0.5) * 0.35,
-        swayAmp: Math.random() * 0.35 + 0.15,
-        swaySpeed: Math.random() * 0.015 + 0.006,
+        size: isMobile ? (Math.random() * 3 + 3) : (Math.random() * 3.5 + 3.5),
+        vy: Math.random() * 0.5 + 0.25,
+        vx: (Math.random() - 0.5) * 0.25,
+        swayAmp: Math.random() * 0.25 + 0.1,
+        swaySpeed: Math.random() * 0.012 + 0.005,
         swayAngle: Math.random() * Math.PI * 2,
         rot: Math.random() * Math.PI * 2,
-        rotSpeed: (Math.random() - 0.5) * 0.008,
-        alpha: Math.random() * 0.35 + 0.35
+        rotSpeed: (Math.random() - 0.5) * 0.006,
+        alpha: isMobile ? (Math.random() * 0.22 + 0.18) : (Math.random() * 0.25 + 0.22)
       }));
 
       function drawSnowflake(x, y, radius, rotation, alpha) {
@@ -1206,7 +1264,7 @@
         ctx.translate(x, y);
         ctx.rotate(rotation);
         ctx.strokeStyle = `rgba(110, 165, 205, ${alpha})`;
-        ctx.lineWidth = radius > 7 ? 1.35 : 1.05;
+        ctx.lineWidth = radius > 7 ? 1.2 : 0.95;
         ctx.lineCap = 'round';
 
         const branchLen = radius * 0.55;
